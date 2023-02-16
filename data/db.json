@@ -1,0 +1,80 @@
+{
+  "industries": [{
+      "id": "1",
+      "title": "Energy",
+      "subtitle": "Renewable energies are considered a privileged vector in the fight against global warming.",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Energy.jpeg"
+    },
+    {
+      "id": "2",
+      "title": "Automobile",
+      "subtitle": "It is very common for companies with large fleets to experience incidents such as late deliveries, ...",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Automobile.png"
+    },
+    {
+      "id": "3",
+      "title": "Event",
+      "subtitle": "For an event to be successful, it is essential that your organization be impeccable and to do so",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Event.jpeg"
+    },
+    {
+      "id": "4",
+      "title": "E-commerce",
+      "subtitle": "Renewable energies are considered a privileged vector in the fight against global warming.",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/E_comm.jpeg"
+    },
+    {
+      "id": "5",
+      "title": "Health",
+      "subtitle": "Information Technology is considered a privileged playing an increasingly important and predominant role in the health sector",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Health.jpeg"
+    },
+    {
+      "id": "6",
+      "title": "Finance",
+      "subtitle": "Renewable energies are considered a privileged vector in the fight against global warming.",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Energy.jpeg"
+    },
+    {
+      "id": "7",
+      "title": "Education",
+      "subtitle": "It is very common for companies with large fleets to experience incidents such as late deliveries, ...",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Automobile.png"
+    },
+    {
+      "id": "8",
+      "title": "Security",
+      "subtitle": "For an event to be successful, it is essential that your organization be impeccable and to do so",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/power.png"
+    },
+    {
+      "id": "9",
+      "title": "Agriculture",
+      "subtitle": "Renewable energies are considered a privileged vector in the fight against global warming.",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/E_comm.jpeg"
+    },
+    {
+      "id": "10",
+      "title": "Transport",
+      "subtitle": "Information Technology is considered a privileged playing an increasingly important and predominant role in the health sector",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/vehicle_tracking.jpeg"
+    },
+    {
+      "id": "10",
+      "title": "Public Servicies",
+      "subtitle": "Information Technology is considered a privileged playing an increasingly important and predominant role in the health sector",
+      "content": "In the transportation ecosystem, being a leader means looking forward. At Indra, we are at the heart of our clients’ businesses, working hand-in-hand with them throughout the full project life-cycle, offering comprehensive solutions and added-value services. What sets us apart is our in-depth knowledge of the planning, construction, management and operation of transport services and infrastructures, of all types and in all regions.",
+      "picPath": "/src/assets/Abstract Africa patchwork traditional fabric pattern vector map.jpeg"
+    }
+  ]
+}
