@@ -7,7 +7,7 @@ const PatnersLogo = () => {
     <div>
       {/* <!-- Logos begin --> */}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-40 my-32 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-4 md:mx-40 my-32 gap-10">
         <div className="flex justify-center">
           <img src={jlk} alt="" className="h-24" />
         </div>

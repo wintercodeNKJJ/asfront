@@ -1,25 +1,8 @@
 import Energy from "../assets/Energy.jpeg";
 import Automobile from "../assets/Automobile.png";
 import Events from "../assets/Event.jpeg";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const ImageSlider = () => {
-
-  const [industries, setIndustries] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhoast:8000/industries').then(res => {
-      return res.json();
-    }).then(data => {
-      console.log(data);
-      setIndustries(data);
-      console.log(industries);
-    })
-
-  }, [])
-
-
   return (
     <div>
 
@@ -31,9 +14,9 @@ const ImageSlider = () => {
             {/* <!-- item1 of slider --> */}
             <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 
-              <div className="grid grid-cols-5">
+              <div className="grid grid-cils-1 md:grid-cols-5">
                 {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300">
+                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
                   <div className="w-96">
                     <h1 className="text-4xl font-bold font-serif my-4">Energy</h1>
                     <div className="">
@@ -49,8 +32,8 @@ const ImageSlider = () => {
                   </div>
                 </div>
                 {/* <!-- image --> */}
-                <div className="col-span-2">
-                  <img src={Energy} alt="" className="h-60 w-full object-cover" />
+                <div className="md:col-span-2">
+                  <img src={Energy} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                 </div>
               </div>
             </div>
@@ -61,9 +44,9 @@ const ImageSlider = () => {
           <div id="carousel-item-2" className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
             <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 
-              <div className="grid grid-cols-5">
+              <div className="grid gid-cols-1 md:grid-cols-5">
                 {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300">
+                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
                   <div className="w-96">
                     <h1 className="text-4xl font-bold font-serif my-4">Automobile</h1>
                     <div className="">
@@ -79,8 +62,8 @@ const ImageSlider = () => {
                   </div>
                 </div>
                 {/* <!-- image --> */}
-                <div className="col-span-2">
-                  <img src={Automobile} alt="" className="h-60 w-full object-cover" />
+                <div className="md:col-span-2">
+                  <img src={Automobile} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                 </div>
               </div>
             </div>
@@ -89,9 +72,9 @@ const ImageSlider = () => {
           <div id="carousel-item-3" className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
             <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 
-              <div className="grid grid-cols-5">
+              <div className="grid grid-cols-1 md:grid-cols-5">
                 {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300">
+                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
                   <div className="w-96">
                     <h1 className="text-4xl font-bold font-serif my-4">Event</h1>
                     <div className="">
@@ -107,8 +90,8 @@ const ImageSlider = () => {
                   </div>
                 </div>
                 {/* <!-- image --> */}
-                <div className="col-span-2">
-                  <img src={Events} alt="" className="h-60 w-full object-cover" />
+                <div className="md:col-span-2">
+                  <img src={Events} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                 </div>
               </div>
             </div>

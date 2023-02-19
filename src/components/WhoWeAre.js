@@ -46,7 +46,7 @@ const WhoWeAre = () => {
 
         {/* <!-- right side info --> */}
         <div className="bg-[url('/src/assets/power.png')] bg-cover">
-          <div className="p-4 text-white w-64">
+          <div className="p-4 text-white w-full md:w-64">
             <h1 className="text-2xl font-serif">POWER OF INOVATION</h1>
             <div className="font-light">
               <p>Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the

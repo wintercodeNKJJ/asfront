@@ -25,7 +25,7 @@ const OptionsItems = () => {
             <div className="flex justify-center">
               <div className="col-span-1 mx-4 my-4">
                 <a href="test.html" className="hover:opacity-60">
-                  <img src={item.picPath} alt="option" className="h-64 object-cover border border-green-700" />
+                  <img src={item.picPath} alt="option" className="h-64 w-full object-cover border border-green-700" />
                 </a>
 
                 <div className="text-black">

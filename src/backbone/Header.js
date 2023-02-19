@@ -1,5 +1,6 @@
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
+import MobileDropDown from "./mobiledropdown";
 
 const Header = () => {
   return (
@@ -50,15 +51,10 @@ const Header = () => {
 
       <div className="h-12 bg-green-200 visible md:hidden flex px-8 justify-between">
         <div className="flex justify-center items-center col-span-1">
-          <img src="../assets/ASL.png" alt="As Logo" className="h-10" />
+          <img src={ASL} alt="As Logo" className="h-10" />
         </div>
 
-        <div className="p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            className="inline-block w-12 h-8 stroke-current text-black">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h20M4 12h20M4 18h20"></path>
-          </svg>
-        </div>
+        <MobileDropDown />
       </div>
       {/* //  Header Component End */}
     </div>
