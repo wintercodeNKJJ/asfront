@@ -1,5 +1,6 @@
 // import Africa from "../assets/Abstract Africa patchwork traditional fabric pattern vector map.jpeg";
-import Africa from "../assets/ASL.png";
+// import Africa from "../assets/ASL.png";
+import Africa2 from "../assets/logo/ASL.webp";
 import Techno from "../assets/techno.jpeg";
 import Automobile from "../assets/Automobile.png";
 import jlk from "../assets/logo/jlk.png";
@@ -28,7 +29,7 @@ const About = () => {
         </div>
 
         <div className="">
-          <img src={Africa} alt="Africa"
+          <img src={Africa2} alt="Africa"
             className="h-72 w-96 object-cover" />
         </div>
       </div>

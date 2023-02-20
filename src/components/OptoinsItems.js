@@ -1,9 +1,13 @@
 import Datastc from "../dbitems/dbit";
+// import client from "../client";
+// import React, { useEffect, useState } from "react";
+// import imageUrlBuilder from '@sanity/image-url'
+import urlFor from "../utility/imageUrl";
 
 const OptionsItems = () => {
 
   let data = null;
-  const { Industries } = Datastc()
+  const { Industries } = Datastc("industries");
   data = Industries;
   console.log("items1", data);
 
@@ -21,11 +25,11 @@ const OptionsItems = () => {
         <div className="h-full px-4 grid sm:grid-cols-2 md:grid-cols-5">
           {/* <!-- item 1 --> */}
 
-          {data.map((item) => (
+          {Industries.map((item) => (
             <div className="flex justify-center">
               <div className="col-span-1 mx-4 my-4">
-                <a href="test.html" className="hover:opacity-60">
-                  <img src={item.picPath} alt="option" className="h-64 w-full object-cover border border-green-700" />
+                <a href={item.title} className="hover:opacity-60">
+                  <img src={urlFor(item.mainImage)} alt="option" className="h-64 w-full object-cover border border-green-700" />
                 </a>
 
                 <div className="text-black">

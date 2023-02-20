@@ -1,8 +1,11 @@
-import Energy from "../assets/Energy.jpeg";
-import Automobile from "../assets/Automobile.png";
-import Events from "../assets/Event.jpeg";
+import Datastc from "../dbitems/dbit";
+import urlFor from "../utility/imageUrl";
+// import { useEffect } from "react";
 
 const ImageSlider = () => {
+
+  const { Industries } = Datastc("industries");
+
   return (
     <div>
 
@@ -10,103 +13,43 @@ const ImageSlider = () => {
         {/* <!-- Carousel wrapper --> */}
         <div className="relative h-56 overflow-hidden md:h-60">
           {/* <!-- Item 1 --> */}
-          <div id="carousel-item-1" className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
-            {/* <!-- item1 of slider --> */}
-            <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
+          {Industries.map((item) => (
+            <div id={"carousel-item-" + (Industries.indexOf(item) + 1)} className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
+              {/* <!-- item1 of slider --> */}
+              <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 
-              <div className="grid grid-cils-1 md:grid-cols-5">
-                {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
-                  <div className="w-96">
-                    <h1 className="text-4xl font-bold font-serif my-4">Energy</h1>
-                    <div className="">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, dolores aut nam maiores iure
-                        eligendi similique
-                      </p>
-                    </div>
-                    <div className=" my-5">
-                      <button className="bg-gradient-to-br from-green-300 to-green-400 w-24">
-                        learn More </button>
+                <div className="grid grid-cils-1 md:grid-cols-5">
+                  {/* <!-- text --> */}
+                  <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
+                    <div className="w-96">
+                      <h1 className="text-4xl font-bold font-serif my-4">{item.title}</h1>
+                      <div className="">
+                        <p>
+                          {item.subtitle}
+                        </p>
+                      </div>
+                      <div className=" my-5">
+                        <button className="bg-gradient-to-br from-green-300 to-green-400 w-24">
+                          learn More </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* <!-- image --> */}
-                <div className="md:col-span-2">
-                  <img src={Energy} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
-                </div>
-              </div>
-            </div>
-            {/* <!--item1 of slider end --> */}
-          </div>
-
-          {/* <!-- Item 2 --> */}
-          <div id="carousel-item-2" className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
-            <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
-
-              <div className="grid gid-cols-1 md:grid-cols-5">
-                {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
-                  <div className="w-96">
-                    <h1 className="text-4xl font-bold font-serif my-4">Automobile</h1>
-                    <div className="">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, dolores aut nam maiores iure
-                        eligendi similique
-                      </p>
-                    </div>
-                    <div className=" my-5">
-                      <button className="bg-gradient-to-br from-green-300 to-green-400 w-24">
-                        learn More </button>
-                    </div>
+                  {/* <!-- image --> */}
+                  <div className="md:col-span-2">
+                    <img src={urlFor(item.mainImage)} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                   </div>
                 </div>
-                {/* <!-- image --> */}
-                <div className="md:col-span-2">
-                  <img src={Automobile} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
-                </div>
               </div>
+              {/* <!--item1 of slider end --> */}
             </div>
-          </div>
-          {/* <!-- Item 3 --> */}
-          <div id="carousel-item-3" className="hidden duration-700 ease-in-out w-full h-full" data-carousel-item>
-            <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
-
-              <div className="grid grid-cols-1 md:grid-cols-5">
-                {/* <!-- text --> */}
-                <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
-                  <div className="w-96">
-                    <h1 className="text-4xl font-bold font-serif my-4">Event</h1>
-                    <div className="">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, dolores aut nam maiores iure
-                        eligendi similique
-                      </p>
-                    </div>
-                    <div className=" my-5">
-                      <button className="bg-gradient-to-br from-green-300 to-green-400 w-24">
-                        learn More </button>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- image --> */}
-                <div className="md:col-span-2">
-                  <img src={Events} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         {/* <!-- Slider indicators --> */}
         <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-          <button id="carousel-indicator-1" type="button" className="w-3 h-3 rounded-full" aria-current="false"
-            aria-label="Slide 1" data-carousel-slide-to="0"></button>
-
-          <button id="carousel-indicator-1" type="button" className="w-3 h-3 rounded-full" aria-current="false"
-            aria-label="Slide 2" data-carousel-slide-to="1"></button>
-
-          <button id="carousel-indicator-1" type="button" className="w-3 h-3 rounded-full" aria-current="false"
-            aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          {Industries.map((item) => (
+            <button id={"carousel-indicator-" + (Industries.indexOf(item) + 1)} type="button" className="w-3 h-3 rounded-full" aria-current="false"
+              aria-label={"Slide 1" + (Industries.indexOf(item) + 1)} data-carousel-slide-to="0"></button>
+          ))}
         </div>
         {/* <!-- Slider controls --> */}
         <button type="button"

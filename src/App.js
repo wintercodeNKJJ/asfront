@@ -5,15 +5,16 @@ import "../node_modules/flowbite/dist/flowbite"
 import Home from "./pages/home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/about";
-import Industries from "./pages/Industries";
+import Industry from "./pages/Industries";
 import Ditails from "./pages/Ditails";
 import NewsLatest from "./pages/news";
+import Datastc from "./dbitems/dbit";
 
 function App() {
 
-  let links = ["Energy", "Automobile", "Event", "Education", "Finance", "Security", "PublicServicies", "E-commerce", "Health", "Security", "Agriculture", "Transport"];
-  let slinks = ["Infrastructure", "Training", "Development", "Buisness"];
-  let plinks = ["LewooTrack", "Fuel_card", "ERP", "E-Commerce"];
+  const { Industries } = Datastc("industries")
+  const { Services } = Datastc("services")
+  const { Products } = Datastc("products")
   return (
     <div className="App">
       <Router>
@@ -33,24 +34,24 @@ function App() {
             </Route>
 
             <Route path="/Industries">
-              <Industries title="Industries" />
+              <Industry title="Industries" />
             </Route>
 
-            {links.map((link) => (
-              <Route path={"/" + link}>
-                <Ditails title={link} />
+            {Industries.map((link) => (
+              <Route path={"/" + link.title.replace(" ", "_")}>
+                <Ditails title={link.title.replace(" ", "_")} />
               </Route>
             ))}
 
-            {slinks.map((link) => (
-              <Route path={"/" + link}>
-                <Ditails title={link} />
+            {Services.map((link) => (
+              <Route path={"/" + link.title.replace(" ", "_")}>
+                <Ditails title={link.title.replace(" ", "_")} />
               </Route>
             ))}
 
-            {plinks.map((link) => (
-              <Route path={"/" + link}>
-                <Ditails title={link} />
+            {Products.map((link) => (
+              <Route path={"/" + link.title.replace(" ", "_")}>
+                <Ditails title={link.title.replace(" ", "_")} />
               </Route>
             ))}
 

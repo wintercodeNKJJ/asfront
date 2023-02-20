@@ -2,9 +2,9 @@ import Datastc from "../dbitems/dbit";
 
 const MobileDropDown = () => {
 
-  const { Industries } = Datastc();
-  const { Services } = Datastc();
-  const { Products } = Datastc();
+  const { Industries } = Datastc("industries");
+  const { Services } = Datastc("services");
+  const { Products } = Datastc("products");
 
   return (
     <div>
