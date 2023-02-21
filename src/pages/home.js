@@ -5,6 +5,11 @@ import PartnersLogo from "../components/PatnersLogo";
 import OptionsItems from "../components/OptoinsItems";
 import TeamBest from "../components/TeamBest";
 
+/**
+ * Composed of several components
+ * Not all are linked to sanity
+ * @returns the home page of AS
+ */
 const Home = () => {
   return (
     <div>

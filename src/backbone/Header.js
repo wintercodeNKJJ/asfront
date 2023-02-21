@@ -1,3 +1,15 @@
+/**
+ * ###########################################
+ * the Header component
+ * Content
+ * top level nav bar
+ *  -Links to (Investors, relations, Latet news, who we are, Eglish translation) pages and functions
+ * Bottom level nav bar
+ *  -Links to (Home, Industries, Services, Products, reasearch and development) pages
+ * 
+ * This component makes use of the menu component, and the mobiledropdown component
+ */
+
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
 import MobileDropDown from "./mobiledropdown";
@@ -39,6 +51,10 @@ const Header = () => {
           <ul className="flex items-end h-full pb-6 gap-12 font-serif">
             <li className=" border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="/">Home</a></li>
 
+            {/* 
+calling the menu component with the corresponding title is important as it is used to search for the coresponding data on sanity
+e.g Industries is used to fetch all the industries components found on sanity. all that is done from the menu component
+*/}
             <Menu title="Industries" />
             <Menu title="Servicies" />
             <Menu title="Products" />
@@ -54,6 +70,9 @@ const Header = () => {
           <img src={ASL} alt="As Logo" className="h-10" />
         </div>
 
+        {/* 
+the dropdown component is used to display links on the mobile adaptation of the website
+*/}
         <MobileDropDown />
       </div>
       {/* //  Header Component End */}

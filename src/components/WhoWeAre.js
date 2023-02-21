@@ -1,5 +1,10 @@
 import ASL from "../assets/ASL.png"
 
+/**
+ * Africa systems principles and moto
+ * The data hier is not yet related to sanity
+ * @returns Informations concerning Africa systems principles
+ */
 const WhoWeAre = () => {
   return (
     <div>

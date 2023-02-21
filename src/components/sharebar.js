@@ -1,3 +1,7 @@
+/**
+ * Used to share Africa Systems webpage to every social network
+ * @returns A shar bar containing links to tweeter and other social networks
+ */
 const ShareBare = () => {
   return (
     <div>

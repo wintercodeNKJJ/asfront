@@ -1,3 +1,14 @@
+/**
+ * ########################################################
+ * the footer component
+ * Content
+ *  -Africa Systems logo information/description
+ *  -Links to (About us, Industries, Services, Contact us) pages
+ *  -Africa systems contact info.
+ * 
+ * this content is not yet editable from Sanity cms(to be done)
+ */
+
 import ASL from "../assets/ASL.png";
 
 const footer = () => {

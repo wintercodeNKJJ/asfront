@@ -2,6 +2,11 @@ import Zafack from "../assets/team/ClementZafack.png";
 import Zebaze from "../assets/team/mireilZebaze.png";
 import Richard from "../assets/team/fotsoRichard.png";
 
+/**
+ * This component shows the best 3 team members of africa systems
+ * the information should be recorded insanity
+ * @returns the best team members of Africa Systems
+ */
 const TeamBest = () => {
   return (
     <div>

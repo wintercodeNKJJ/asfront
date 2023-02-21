@@ -3,6 +3,11 @@ import Automobile from "../assets/Automobile.png";
 import Events from "../assets/Event.jpeg";
 import veiclT from "../assets/vehicle_tracking.jpeg";
 
+/**
+ * This block is used to chanel latest news to a particular page
+ * for the users to stay informed of africa systems activites
+ * @returns news from Africa systems activites
+ */
 const TopNewsBlock = () => {
   return (
     <div>

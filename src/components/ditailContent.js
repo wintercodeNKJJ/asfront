@@ -1,7 +1,23 @@
+/**
+ * Only the central component is loaded from sanity.
+ * the rest of the elements should be loaded from sanity too
+ */
+
 import OptionsItems from "./OptoinsItems";
 import imageUrl from "../utility/imageUrl";
 import Techno from "../assets/techno.jpeg";
 
+/**
+ * 
+ * @param {Object} data the item to be displayed ditaily
+ * @param {string} title the title to use
+ * @param {object} prop contains a data and a title
+ * @example 
+ * data = Industries.find((data)=>(data.title === "title"));
+ * title = data.title
+ * <DitailsContent data = {data} title={title}/>
+ * @returns A ditail page describing the item
+ */
 const DitailsContent = (prop) => {
   return (
     <div>

@@ -1,3 +1,7 @@
+/**
+ * makes several calls to sanity to build mobile menu content for africa systems
+ */
+
 import Datastc from "../dbitems/dbit";
 
 const MobileDropDown = () => {
@@ -21,6 +25,8 @@ const MobileDropDown = () => {
             <li className="border-b-4 border-transparent"><a href="/"
               className="w-fit border-b-2 border-green-700">Home</a></li>
             <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+
+            {/* Industries Menu */}
             <li className="border-b-4 border-transparent"><a href="/Industries"
               className="w-fit border-b-2 border-green-700">Industries</a>
               <ul className="grid grid-cols-3 gap-2">
@@ -30,6 +36,8 @@ const MobileDropDown = () => {
               </ul>
             </li>
             <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+
+            {/* Services Menu */}
             <li className="border-b-4 border-transparent"><a href="/Services"
               className="w-fit border-b-2 border-green-700">Servicies</a>
               <ul className="grid grid-cols-3 gap-2">
@@ -39,6 +47,8 @@ const MobileDropDown = () => {
               </ul>
             </li>
             <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+
+            {/* Products Menu */}
             <li className="border-b-4 border-transparent"><a href="/"
               className="w-fit border-b-2 border-green-700">Products</a>
               <ul className="grid grid-cols-3 gap-2">
@@ -48,6 +58,8 @@ const MobileDropDown = () => {
               </ul>
             </li>
             <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+
+            {/* other links */}
             <li className="border-b-4 border-transparent"><a href="/nolink"
               className="w-fit border-b-2 border-green-700">Research &
               Development</a></li>

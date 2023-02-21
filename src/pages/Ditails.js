@@ -3,6 +3,13 @@ import PatnersLogo from "../components/PatnersLogo";
 import News from "../components/News";
 import DitailsContent from "../components/ditailContent";
 
+/**
+ * Item description component
+ * @param title the item to be described ditaily
+ * @prop {object} prop contains the title paramenter
+ * @example <Ditails title={title}/> 
+ * @returns A ditail page description of the item
+ */
 
 const Ditails = (prop) => {
 

@@ -8,6 +8,10 @@ import sss from "../assets/logo/sss.png";
 import lweoo from "../assets/logo/lewoo.png";
 import News from "../components/News";
 
+/**
+ * The pages is not yet connected to AS
+ * @returns the about page of AS
+ */
 const About = () => {
   return (
     <div>

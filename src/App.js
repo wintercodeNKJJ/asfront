@@ -5,7 +5,7 @@ import "../node_modules/flowbite/dist/flowbite"
 import Home from "./pages/home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/about";
-import Industry from "./pages/Industries";
+import Category from "./pages/Category";
 import Ditails from "./pages/Ditails";
 import NewsLatest from "./pages/news";
 import Datastc from "./dbitems/dbit";
@@ -34,7 +34,11 @@ function App() {
             </Route>
 
             <Route path="/Industries">
-              <Industry title="Industries" />
+              <Category title="Industries" />
+            </Route>
+
+            <Route path="/Services">
+              <Category title="Services" />
             </Route>
 
             {Industries.map((link) => (

@@ -4,6 +4,10 @@ import Datastc from "../dbitems/dbit";
 // import imageUrlBuilder from '@sanity/image-url'
 import urlFor from "../utility/imageUrl";
 
+/**
+ * Should return items coresponding to the  required category
+ * @returns Options items from industries
+ */
 const OptionsItems = () => {
 
   let data = null;

@@ -1,3 +1,8 @@
+/**
+ * learn more link to the coresponding page using the title entered in the component
+ * @returns link to the items ditail page
+ */
+
 const LearnMore = () => {
   return (
     <div>

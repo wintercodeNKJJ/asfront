@@ -2,7 +2,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 import client from "../utility/client";
 
-
+/**
+ * This component is used to fetch data from sanity.
+ * @param {string} target data to be requested from sanity
+ * @example
+ * Datastc("industries") to get industries
+ * Datastc("services") to get services
+ * Datastc("products") to get products
+ * @returns A set if data containing industries, services, or Products
+ */
 const Datastc = (target) => {
 
   const [Industries, setIndustries] = useState([]);

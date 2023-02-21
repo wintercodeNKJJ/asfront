@@ -1,5 +1,9 @@
 import NewsData from "../dbitems/dbnews";
-
+/**
+ * this page contains the news of AS activites
+ * not yet linked to AS
+ * @returns news page of AS
+ */
 const NewsLatest = () => {
   const { Pnews } = NewsData();
   const { Nnews } = NewsData();

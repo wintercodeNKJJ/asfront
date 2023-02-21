@@ -2,6 +2,10 @@ import sss from "../assets/logo/sss.png";
 import jlk from "../assets/logo/jlk.png";
 import lewoo from "../assets/logo/lewoo.png";
 
+/**
+ * the parners of the company africa systems are jlk lewoo and ...
+ * @returns partners log display and responsive
+ */
 const PatnersLogo = () => {
   return (
     <div>

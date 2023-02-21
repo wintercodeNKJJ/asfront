@@ -1,5 +1,13 @@
 import Datastc from "../dbitems/dbit";
 
+/**
+ * Takes the title of a particular cathegory and  generate the coresponding menu using sanity
+ * @param {string} title  titel of the reqired menu
+ * @example
+ * title = "industries" 
+ * <Memu title={title}/>
+ * @returns Menu object
+ */
 const Menu = (props) => {
 
   let data = null;

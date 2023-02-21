@@ -5,7 +5,7 @@ import power from "../assets/power.png";
 import News from "../components/News";
 import OptionsItems from "../components/OptoinsItems";
 
-const Industries = (prop) => {
+const Category = (prop) => {
 
 
   const Title = prop.title;
@@ -104,4 +104,4 @@ const Industries = (prop) => {
   );
 }
 
-export default Industries;
+export default Category;
