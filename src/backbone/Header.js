@@ -59,7 +59,7 @@ e.g Industries is used to fetch all the industries components found on sanity. a
             <Menu title="Servicies" />
             <Menu title="Products" />
 
-            <li className="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="test.html">Research &
+            <li className="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="Research_&_Development">Research &
               Development</a></li>
           </ul>
         </div>

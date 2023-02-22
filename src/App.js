@@ -37,8 +37,16 @@ function App() {
               <Category title="Industries" />
             </Route>
 
-            <Route path="/Services">
-              <Category title="Services" />
+            <Route path="/Servicies">
+              <Category title="Servicies" />
+            </Route>
+
+            <Route path="/Products">
+              <Category title="Products" />
+            </Route>
+
+            <Route path="/Research_&_Development">
+              <Category title="Research_&_Development" />
             </Route>
 
             {Industries.map((link) => (
