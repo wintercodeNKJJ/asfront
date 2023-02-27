@@ -5,5 +5,15 @@ import author from './author'
 import industries from './industries'
 import services from './services'
 import products from './products'
+import blog from './blog'
 
-export const schemaTypes = [post, industries, services, products, author, category, blockContent]
+export const schemaTypes = [
+  blog,
+  post,
+  industries,
+  services,
+  products,
+  author,
+  category,
+  blockContent,
+]

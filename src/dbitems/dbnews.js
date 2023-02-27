@@ -1,123 +1,129 @@
-import img1p from "../assets/news/image1p.jpeg"
-import img2p from "../assets/news/image2p.jpeg"
-import img3p from "../assets/news/image3p.jpeg"
-import img4p from "../assets/news/image4p.jpeg"
-import img5p from "../assets/news/image5p.jpeg"
-import img6p from "../assets/news/image6p.jpeg"
-import img1n from "../assets/news/image1n.jpeg"
-import img2n from "../assets/news/image2n.jpeg"
-import img3n from "../assets/news/image3n.jpeg"
-import img1g from "../assets/news/image1g.jpeg"
-import img2g from "../assets/news/image2g.jpeg"
-import img3g from "../assets/news/image3g.jpeg"
-import img1t from "../assets/news/image1t.jpeg"
+import { useEffect } from "react";
+import { useState } from "react";
+import client from "../utility/client";
 
-const NewsData = () => {
+/**
+ * This component is used to fetch data from sanity.
+ * @param {string} newsdata data to be requested from sanity
+ * @example
+ * Ndatastc("industries") to get industries
+ * Ndatastc("services") to get services
+ * Ndatastc("products") to get products
+ * @returns A set if data containing industries, services, or Products
+ */
+const Ndatastc = (newsdata) => {
 
-  const Pnews = [
-    {
-      id: 1,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img1p
-    },
-    {
-      id: 2,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img2p
-    },
-    {
-      id: 3,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img3p
-    },
-    {
-      id: 4,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img4p
-    },
-    {
-      id: 5,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img5p
-    },
-    {
-      id: 6,
-      title: "planet news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img6p
+  const [Inovation, setInovation] = useState([]);
+  const [Events, setEvents] = useState([]);
+  const [News, setNews] = useState([]);
+  const [Cnews, setCnews] = useState([]);
+
+  useEffect(() => {
+    console.log("skdjhiusdgid")
+    switch (newsdata) {
+      case "inovation":
+        client.fetch(
+          `*[_type == "category" && title == "Inovation"]{
+            _id,
+            "inovations": *[_type=="blog" && categories[0]._ref == ^._id]{
+              _id,
+              _createdAt,
+              mainImage,
+              subtitle,
+                title,
+                body[0]{
+                  children[0]{
+                    text
+                  }
+                }
+            } | order(publishedAt desc)
+          }`
+        ).then(data => {
+          setInovation(data[0]);
+          console.log("inovation....", data[0]);
+        });
+        break;
+      case "event":
+        console.log("news fetcher call", newsdata);
+
+        // Fetch all Services with thier respective authors
+        client.fetch(
+          `*[_type == "category" && title == "Event"]{
+            _id,
+            "events": *[_type=="blog" && categories[0]._ref == ^._id]{
+              _id,
+              _createdAt,
+              mainImage,
+              subtitle,
+                title,
+                body[0]{
+                  children[0]{
+                    text
+                  }
+                }
+            } | order(publishedAt desc)
+          }`
+        ).then(data => {
+          setEvents(data[0]);
+        });
+
+        break;
+      case "news":
+        client.fetch(
+          `*[_type == "category" && title == "News"]{
+            _id,
+            "news": *[_type=="blog" && categories[0]._ref == ^._id]{
+              _id,
+              _createdAt,
+              mainImage,
+              subtitle,
+                title,
+                body[0]{
+                  children[0]{
+                    text
+                  }
+                }
+            } | order(publishedAt desc)
+          }`
+        ).then(data => {
+          setNews(data[0]);
+          console.log("news.......", data[0]);
+        });
+        break;
+      case "cnews":
+        console.log("news fetcher call", newsdata);
+
+        // Fetch all products with thier respective authors
+        client.fetch(
+          `*[_type == "blog"]{
+      _id,
+      _createdAt,
+      title,
+      subtitle,
+      images,
+      body[0]{
+        children[0]{
+          text
+        }
+      },
+      mainImage{
+        asset,
+      },
+      "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+  } | order(publishedAt desc)`
+        ).then(data => {
+          setCnews(data);
+          console.log("Cnews links", data)
+        });
+        break;
+
+      default:
+        break;
     }
-  ]
+  }, [newsdata])
 
-  const Nnews = [
-    {
-      id: 1,
-      title: "Neurs news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img1n
-    },
-    {
-      id: 2,
-      title: "Neurs news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img2n
-    },
-    {
-      id: 3,
-      title: "Neurs news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img3n
-    }
-  ]
-
-  const Gnews = [
-    {
-      id: 1,
-      title: "Green news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img1g
-    },
-    {
-      id: 1,
-      title: "Green news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img2g
-    },
-    {
-      id: 1,
-      title: "Green news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img3g
-    }
-  ]
-
-  const Tnews = [
-    {
-      id: 1,
-      title: "Transport news category title",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero quos ex similique officiis numquam eligendi molestiae voluptatibus totam, itaque vel distinctio sunt qui dignissimos expedita unde iusto, esse ipsa",
-      time: "Monday 22 Dec 2023 (12:00)",
-      image: img1t
-    }
-  ]
-
-  return { Pnews, Nnews, Gnews, Tnews };
+  return { News, Events, Inovation, Cnews }
 }
 
-export default NewsData;
+export default Ndatastc;
+

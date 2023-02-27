@@ -9,12 +9,15 @@ import Category from "./pages/Category";
 import Ditails from "./pages/Ditails";
 import NewsLatest from "./pages/news";
 import Datastc from "./dbitems/dbit";
+import NewsDitails from "./pages/NewsDitails";
+import Ndatastc from "./dbitems/dbnews";
 
 function App() {
 
   const { Industries } = Datastc("industries")
   const { Services } = Datastc("services")
   const { Products } = Datastc("products")
+  const { Cnews } = Ndatastc('cnews');
   return (
     <div className="App">
       <Router>
@@ -64,6 +67,12 @@ function App() {
             {Products.map((link) => (
               <Route path={"/" + link.title.replace(" ", "_")}>
                 <Ditails title={link.title.replace(" ", "_")} />
+              </Route>
+            ))}
+
+            {Cnews.map((link) => (
+              <Route path={"/newsDitail/" + link._id}>
+                <NewsDitails item={link} />
               </Route>
             ))}
 
