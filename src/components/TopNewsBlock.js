@@ -1,8 +1,3 @@
-// import Energy from "../assets/Energy.jpeg";
-// import Automobile from "../assets/Automobile.png";
-// import Events from "../assets/Event.jpeg";
-// import veiclT from "../assets/vehicle_tracking.jpeg";
-// import HomeCont from "../dbitems/homeContent";
 import Datastc from "../dbitems/dbit";
 import urlFor from "../utility/imageUrl";
 
