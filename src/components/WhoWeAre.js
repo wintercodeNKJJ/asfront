@@ -1,4 +1,5 @@
 import ASL from "../assets/ASL.png"
+import DataAS from "../dbitems/dataAs";
 
 /**
  * Africa systems principles and moto
@@ -6,6 +7,21 @@ import ASL from "../assets/ASL.png"
  * @returns Informations concerning Africa systems principles
  */
 const WhoWeAre = () => {
+
+  const { AsData } = DataAS("vission")
+  const { Inovation } = DataAS("inovation")
+
+  let showAsD = true;
+  let showInov = true;
+
+  if (AsData.length <= 0) {
+    showAsD = false
+  }
+
+  if (Inovation.length <= 0) {
+    showInov = false
+  }
+
   return (
     <div>
       {/* <!-- who we are and what we do begin --> */}
@@ -16,52 +32,37 @@ const WhoWeAre = () => {
         <div className="col-span-2">
 
           {/* <!-- who we are --> */}
-          <div className="lg:flex md:mb-4">
-            <div className="bg-green-400 lg:w-1/2 h-36 flex justify-center items-center">
-              <img src={ASL} alt="" className="h-32" />
-            </div>
 
-            <div className="px-2 lg:w-1/2 mt-4 lg:mt-0">
-              <h1 className="text-xl font-bold font-serif">Who we are</h1>
+          {showAsD && AsData.map(data => (
+            <div className="lg:flex md:mb-4">
+              <div className="bg-green-400 lg:w-1/2 h-36 flex justify-center items-center">
+                <img src={ASL} alt="" className="h-32" />
+              </div>
 
-              <div className="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui autem, magnam maxime numquam reprehenderit
-                  corrupti aliquam veritatis</p>
+              <div className="px-2 lg:w-1/2 mt-4 lg:mt-0">
+                <h1 className="text-xl font-bold font-serif">{data.title}</h1>
+
+                <div className="">
+                  <p>{data.body}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* <!-- what we do --> */}
-          <div className="lg:flex">
-            <div className="bg-green-400 lg:w-1/2 h-36 flex justify-center items-center">
-              <img src={ASL} alt="" className="h-32" />
-            </div>
-
-            <div className="px-2 lg:w-1/2 mt-4 lg:mt-0">
-              <h1 className="text-xl font-bold font-serif">What we do</h1>
-
-              <div className="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui autem, magnam maxime numquam reprehenderit
-                  corrupti aliquam veritatis</p>
-              </div>
-            </div>
-          </div>
+          ))}
 
         </div>
 
-        {/* <!-- right side info --> */}
-        <div className="bg-[url('/src/assets/power.png')] bg-cover">
-          <div className="p-4 text-white w-full md:w-64">
-            <h1 className="text-2xl font-serif">POWER OF INOVATION</h1>
-            <div className="font-light">
-              <p>Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the
-                entire world, stimulating progress, giving birth to evolution.</p>
+        {showInov &&
+          <div className="bg-[url('/src/assets/power.png')] bg-cover">
+            <div className="p-4 text-white w-full md:w-64">
+              <h1 className="text-2xl font-serif">{Inovation[0].title}</h1>
+              <div className="font-light">
+                <p>{Inovation[0].body}</p>
+              </div>
             </div>
           </div>
-        </div>
+        }
       </div>
 
-      {/* <!-- who we are and what we do end --> */}
     </div>
   );
 }
