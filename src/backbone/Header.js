@@ -1,15 +1,3 @@
-/**
- * ###########################################
- * the Header component
- * Content
- * top level nav bar
- *  -Links to (Investors, relations, Latet news, who we are, Eglish translation) pages and functions
- * Bottom level nav bar
- *  -Links to (Home, Industries, Services, Products, reasearch and development) pages
- * 
- * This component makes use of the menu component, and the mobiledropdown component
- */
-
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
 import MobileDropDown from "./mobiledropdown";
@@ -17,9 +5,9 @@ import MobileDropDown from "./mobiledropdown";
 const Header = () => {
   return (
     <div>
-      {/* // Header Component begine */}
+
       <div className="hidden md:visible md:grid grid-cols-5 w-full bg-green-700 h-10 px-11 lg:px-40">
-        {/* // top links */}
+
         <div className="col-span-1"></div>
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
@@ -34,13 +22,13 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        {/* // search bar */}
+
         <div className="flex justify-center items-center col-span-1">
           <input className=" bg-white p-1 w-48 h-6" placeholder="search" type="text" />
         </div>
       </div>
       <div className="hidden md:visible w-full h-28 bg-green-200 lg:px-40 px-8 md:grid grid-cols-4">
-        {/* // logo */}
+
         <div className="flex justify-center items-center col-span-1">
           <a href="/">
             <img src={ASL} alt="As Logo" className="h-24" />
@@ -51,10 +39,6 @@ const Header = () => {
           <ul className="flex items-end h-full pb-6 gap-12 font-serif">
             <li className=" border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="/">Home</a></li>
 
-            {/* 
-calling the menu component with the corresponding title is important as it is used to search for the coresponding data on sanity
-e.g Industries is used to fetch all the industries components found on sanity. all that is done from the menu component
-*/}
             <Menu title="Industries" />
             <Menu title="Servicies" />
             <Menu title="Products" />
