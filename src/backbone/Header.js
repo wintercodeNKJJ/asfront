@@ -12,8 +12,7 @@ const Header = () => {
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
-              href="test.html">Investors
-              relations</a></li>
+              href="test.html">E Eommerce</a></li>
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
               href="/News">Latest news</a></li>
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
@@ -37,13 +36,13 @@ const Header = () => {
 
         <div className="col-span-3 ">
           <ul className="flex items-end h-full pb-6 gap-12 font-serif">
-            <li className=" border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="/">Home</a></li>
+            <li className=" border-b-4 border-green-200 hover:border-b-4 hover:border-green-700 py-2.5"><a href="/">Home</a></li>
 
             <Menu title="Industries" />
             <Menu title="Servicies" />
             <Menu title="Products" />
 
-            <li className="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"><a href="Research_&_Development">Research &
+            <li className="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700 py-2.5"><a href="Research_&_Development">Research &
               Development</a></li>
           </ul>
         </div>
