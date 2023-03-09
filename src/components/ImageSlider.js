@@ -11,7 +11,7 @@ const ImageSlider = () => {
     <div>
 
       <div className="h-56 md:h-60 relative">
-        <Carousel>
+        <Carousel >
           {Industries.map((item) => (
             <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
               {/* <!-- item1 of slider --> */}
