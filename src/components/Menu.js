@@ -39,6 +39,7 @@ const Menu = (props) => {
     console.log("itemsA", data);
   }
 
+
   return (
 
     <div>
@@ -49,8 +50,9 @@ const Menu = (props) => {
         label={props.title}
         arrowIcon={false}
         size="lg"
+
       >
-        <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-green-200 grid md:grid-cols-3 lg:grid-cols-5 gap-10 w-full h-full">
+        <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-green-200 grid md:grid-cols-3 lg:grid-cols-5 gap-10 w-full h-full -my-2">
           {data.map((Itm) => (
             <div className="text-black w-20 md:w-28 lg:w-40 relative">
               <a href={"/" + Itm.title.replace(" ", "_")}>
