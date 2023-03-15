@@ -69,7 +69,7 @@ const MobileDropDown = () => {
             <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
             <li className="border-b-4 border-transparent"><a href="/News"
               className="w-fit border-b-2 border-green-700">Latest news</a></li>
-            <li className="border-b-4 border-transparent"><a href="/"
+            <li className="border-b-4 border-transparent"><a href="https://ecomm-wintercodenkjj.vercel.app/"
               className="w-fit border-b-2 border-green-700">E Commerce</a></li>
           </ul>
         </div>
