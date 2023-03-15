@@ -12,7 +12,7 @@ const Header = () => {
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
-              href="test.html">E Eommerce</a></li>
+              href="https://ecomm-wintercodenkjj.vercel.app/">E Eommerce</a></li>
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
               href="/News">Latest news</a></li>
             <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
