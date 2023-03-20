@@ -1,17 +1,30 @@
 import Datastc from "../dbitems/dbit";
 import urlFor from "../utility/imageUrl";
 import { Carousel } from "flowbite-react";
-// import { useEffect } from "react";
+// import image1 from '../assets/Energy.jpeg'
+// import image2 from '../assets/Health.jpeg'
 
 const ImageSlider = () => {
 
   const { Industries } = Datastc("industries");
+  // const Industries = [
+  //   {
+  //     title: "this os a title",
+  //     subtitle: "this is a sub title this is a sub title this is a sub title this is a sub title this is a sub title",
+  //     mainImage: image1,
+  //   },
+  //   {
+  //     title: "this os a title",
+  //     subtitle: "this is a sub title this is a sub title this is a sub title this is a sub title this is a sub title",
+  //     mainImage: image2,
+  //   },
+  // ]
 
   return (
     <div>
 
-      <div className="h-56 md:h-60 relative">
-        <Carousel >
+      <div className="h-56 md:h-60 relative corner-squar">
+        <Carousel>
           {Industries.map((item) => (
             <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
               {/* <!-- item1 of slider --> */}
@@ -35,7 +48,7 @@ const ImageSlider = () => {
                   </div>
                   {/* <!-- image --> */}
                   <div className="md:col-span-2">
-                    <img src={urlFor(item.mainImage)} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
+                    <img src={urlFor(item.mainImage).url} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                   </div>
                 </div>
               </div>

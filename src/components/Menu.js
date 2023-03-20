@@ -46,10 +46,11 @@ const Menu = (props) => {
 
       <Dropdown
         trigger="hover"
-        class="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700"
+        class=" slotion border-b-4 border-b-green-200 bg-green-200 animunder after:w-0"
         label={props.title}
         arrowIcon={false}
         size="lg"
+        href={`/${props.title}`}
 
       >
         <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-green-200 grid md:grid-cols-3 lg:grid-cols-5 gap-10 w-full h-full -my-2">
@@ -64,7 +65,6 @@ const Menu = (props) => {
           ))}
         </div>
       </Dropdown>
-
 
     </div>
   );

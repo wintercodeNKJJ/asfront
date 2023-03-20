@@ -1,6 +1,7 @@
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
 import MobileDropDown from "./mobiledropdown";
+import { AiOutlineSearch } from 'react-icons/ai'
 
 const Header = () => {
   return (
@@ -23,7 +24,10 @@ const Header = () => {
         </div>
 
         <div className="flex justify-center items-center col-span-1">
-          <input className=" bg-white p-1 w-48 h-6" placeholder="search" type="text" />
+          <input className=" bg-white p-1 w-40 h-6 border-none" placeholder="search..." type="text" />
+          <div className=" w-6 h-6 bg-green-500 flex justify-center items-center text-white">
+            <AiOutlineSearch size={20} />
+          </div>
         </div>
       </div>
       <div className="hidden md:visible w-full h-28 bg-green-200 lg:px-40 px-8 md:grid grid-cols-4">
@@ -36,13 +40,13 @@ const Header = () => {
 
         <div className="col-span-3 ">
           <ul className="flex items-end h-full pb-6 gap-12 font-serif">
-            <li className=" border-b-4 border-green-200 hover:border-b-4 hover:border-green-700 py-2.5"><a href="/">Home</a></li>
+            <li className=" animunder after:w-0"><a href="/">Home</a></li>
 
             <Menu title="Industries" />
             <Menu title="Servicies" />
             <Menu title="Products" />
 
-            <li className="border-b-4 border-green-200 hover:border-b-4 hover:border-green-700 py-2.5"><a href="Research_&_Development">Research &
+            <li className="animunder after:w-0"><a href="Research_&_Development">Research &
               Development</a></li>
           </ul>
         </div>

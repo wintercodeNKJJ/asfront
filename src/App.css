@@ -37,3 +37,24 @@
     transform: rotate(360deg);
   }
 } */
+
+.slotion>span {
+  padding: 0px;
+}
+
+.corner-squar>div>div {
+  border-radius: 0px;
+}
+
+.animunder::after {
+  width: 0px;
+  height: 4px;
+  background-color: rgb(38, 153, 38);
+  display: block;
+  transition-duration: 500ms;
+  border-radius: 24px;
+}
+
+.animunder:hover::after {
+  width: 100%;
+}

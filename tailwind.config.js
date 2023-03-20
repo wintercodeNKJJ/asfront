@@ -9,9 +9,11 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("flowbite/plugin"),
-    require("flowbite-react"),
+    require("daisyui"),
+    require("tw-elements/dist/plugin")
   ],
 }
 
-// require("daisyui"),
+// require("daisyui"), 
+    // require("flowbite/plugin"),
+    // require("flowbite-react"),

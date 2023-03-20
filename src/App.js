@@ -11,6 +11,7 @@ import NewsLatest from "./pages/news";
 import Datastc from "./dbitems/dbit";
 import NewsDitails from "./pages/NewsDitails";
 import Ndatastc from "./dbitems/dbnews";
+import * as te from 'tw-elements';
 
 function App() {
 
