@@ -86,11 +86,6 @@ const Datastc = (target) => {
     }
   }, [target])
 
-  console.log("data fetched from sanity", Industries, Services, Products);
-
-
-  console.log("Data fetched succesfully --------------------");
-
   return { Industries, Services, Products }
 }
 

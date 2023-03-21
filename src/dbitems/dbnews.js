@@ -19,7 +19,6 @@ const Ndatastc = (newsdata) => {
   const [Cnews, setCnews] = useState([]);
 
   useEffect(() => {
-    console.log("skdjhiusdgid")
     switch (newsdata) {
       case "inovation":
         client.fetch(
@@ -40,11 +39,9 @@ const Ndatastc = (newsdata) => {
           }`
         ).then(data => {
           setInovation(data[0]);
-          console.log("inovation....", data[0]);
         });
         break;
       case "event":
-        console.log("news fetcher call", newsdata);
 
         // Fetch all Services with thier respective authors
         client.fetch(
@@ -87,11 +84,9 @@ const Ndatastc = (newsdata) => {
           }`
         ).then(data => {
           setNews(data[0]);
-          console.log("news.......", data[0]);
         });
         break;
       case "cnews":
-        console.log("news fetcher call", newsdata);
 
         // Fetch all products with thier respective authors
         client.fetch(
@@ -113,7 +108,6 @@ const Ndatastc = (newsdata) => {
   } | order(publishedAt desc)`
         ).then(data => {
           setCnews(data);
-          console.log("Cnews links", data)
         });
         break;
 

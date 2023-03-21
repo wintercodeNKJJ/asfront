@@ -19,7 +19,6 @@ import Techno from "../assets/techno.jpeg";
  * @returns A ditail page describing the item
  */
 const DitailsContent = (prop) => {
-  console.log("prop ditails", prop.title)
   return (
     <div>
 
@@ -41,61 +40,69 @@ const DitailsContent = (prop) => {
       </div>
       {/* <!-- tom landing picture end --> */}
 
-      {/* <!-- related chapters begin --> */}
-      <div className="md:px-40 px-4 my-8">
-        <div className="border border-green-700 grid lg:grid-cols-3 grid-cols-1 p-4 gap-4">
-          <div className=" col-span-1">
-            <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className="h-44 w-full object-cover" />
-            <div className="flex justify-end text-sm m-1">
-              <p>29/3/2012</p>
-            </div>
-            <h1 className="font-bold font-serif text-xl ">{prop.data.subtitle}</h1>
-          </div>
+      <div className="grid md:grid-cols-3 gap-2 py-10 px-8 md:px-20 lg:px-40">
 
-          <div className=" col-span-1">
-            <img src={Techno} alt="Energy" className="h-44 w-full object-cover" />
-            <div className="flex justify-end text-sm m-1">
-              <p>29/3/2012</p>
-            </div>
-            <h1 className="font-bold font-serif text-2xl">Energy subtopic one ...</h1>
-          </div>
+        {/* <!-- top news block begin --> grid lg:grid-cols-3 grid-cols-1 gap-2 */}
 
-          <div className=" col-span-1">
-            <img src={Techno} alt="Energy" className="h-44 w-full object-cover" />
-            <div className="flex justify-end text-sm m-1">
-              <p>29/3/2012</p>
-            </div>
-            <h1 className="font-bold font-serif text-2xl">Energy subtopic one ...</h1>
-          </div>
+        <div className="col-span-1 md:col-span-2 ">
 
+          <div className="col-span-3">
+            <div className=" w-full pt-6">
+              <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className="h-44 w-full object-cover" />
+            </div>
+          </div>
+          {/* <!-- left side --> */}
+          <div className="col-span-3">
+            <div className="my-5 text-2xl font-serif font-bold">
+              <h1>{prop.data.subtitle}</h1>
+            </div>
+            <div>
+              <p>
+                {prop.data.body.children.text}
+              </p>
+            </div>
+          </div>
         </div>
+
+        {/* <!-- top news block end--> */}
+
+        {/* <!-- related chapters begin --> */}
+        <div className=" p-4">
+          <div className="flex flex-col">
+            <div className="my-2">
+              <div className="">
+                <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className=" h-24 w-full object-cover" />
+                <div className="flex justify-end text-sm">
+                  <p>29/3/2012</p>
+                </div>
+              </div>
+              <h1 className="font-bold text-justify ">{prop.data.subtitle.substring(0, 50) + '...'}</h1>
+            </div>
+
+            <div className="my-2">
+              <div className="">
+                <img src={Techno} alt="Energy" className="h-24 w-full object-cover" />
+                <div className="flex justify-end text-sm">
+                  <p>29/3/2012</p>
+                </div>
+              </div>
+              <h1 className="font-bold text-justify ">Energy subtopic one ...</h1>
+            </div>
+
+            <div className="my-2">
+              <div className="">
+                <img src={Techno} alt="Energy" className="h-24 w-full object-cover" />
+                <div className="flex justify-end text-sm">
+                  <p>29/3/2012</p>
+                </div>
+              </div>
+              <h1 className="font-bold text-justify ">Energy subtopic one ...</h1>
+            </div>
+
+          </div>
+        </div>
+        {/* <!-- related chapters end --> */}
       </div>
-      {/* <!-- related chapters end --> */}
-
-      {/* <!-- top news block begin --> */}
-
-      <div className=" px-8 lg:px-40 py-10 grid lg:grid-cols-3 grid-cols-1 gap-8">
-        {/* <!-- left side --> */}
-        <div className="col-span-2">
-          <div className="my-5 text-2xl font-serif font-bold">
-            <h1>{prop.data.subtitle}</h1>
-          </div>
-          <div>
-            <p>
-              {prop.data.body.children.text}
-            </p>
-          </div>
-        </div>
-
-        {/* <!-- right side --> */}
-        <div>
-          <div>
-            <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className="h-60" />
-          </div>
-        </div>
-      </div>
-
-      {/* <!-- top news block end--> */}
 
 
       {/* <span className="font-bold text-3xl mt-5 mb-3 font-serif">Similar topics to {prop.title} </span> */}

@@ -24,19 +24,16 @@ const HomeCont = (Target) => {
       case "top":
         client.fetch(query1).then(data => {
           setTopContent(data);
-          console.log("data", data);
         })
         break;
       case "middle":
         client.fetch(query2).then(data => {
           setMiddleContent(data);
-          console.log("data", data);
         })
         break;
       case "buttom":
         client.fetch(query3).then(data => {
           setButtomContent(data);
-          console.log("data", data);
         })
         break;
 

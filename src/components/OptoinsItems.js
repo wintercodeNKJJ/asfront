@@ -3,6 +3,7 @@ import Datastc from "../dbitems/dbit";
 // import React, { useEffect, useState } from "react";
 // import imageUrlBuilder from '@sanity/image-url'
 import urlFor from "../utility/imageUrl";
+import ASL from "../assets/ASL.png"
 
 /**
  * Should return items coresponding to the  required category
@@ -17,6 +18,7 @@ const OptionsItems = ({ searchtitle }) => {
   switch (searchtitle) {
     case "Industries":
       data = Industries;
+      console.log("Industries fetch")
       break;
     case "Services":
       data = Services;
@@ -24,8 +26,10 @@ const OptionsItems = ({ searchtitle }) => {
       break;
     default:
       data = Products;
+      console.log("Products fetch")
       break;
   }
+  console.log("data state", data)
   // const { Industries } = Datastc("industries");
   // data = Industries;
 
@@ -47,7 +51,7 @@ const OptionsItems = ({ searchtitle }) => {
             <div className="flex justify-center">
               <div className="col-span-1 mx-4 my-4">
                 <a href={item.title} className="hover:opacity-60">
-                  <img src={urlFor(item.mainImage)} alt="option" className="h-64 w-full object-cover border border-green-700" />
+                  <img src={item.mainImage ? urlFor(item.mainImage) : ASL} alt="option" className="h-64 w-full object-cover bg-white" />
                 </a>
 
                 <div className="text-black">

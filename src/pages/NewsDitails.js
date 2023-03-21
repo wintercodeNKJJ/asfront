@@ -2,7 +2,6 @@ import ImageCarosel from "../components/ImageCoarosel";
 import urlFor from "../utility/imageUrl";
 
 const NewsDitails = (props) => {
-  console.log("props", props.item);
   return (
     <div>
       <div className="h-full p-4 flex justify-center">

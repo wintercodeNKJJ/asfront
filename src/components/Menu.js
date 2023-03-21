@@ -18,25 +18,21 @@ const Menu = (props) => {
     if (props.title === "Industries") {
       const { Industries } = Datastc("industries")
       data = Industries;
-      console.log("items1", data);
 
     }
     if (props.title === "Servicies") {
       const { Services } = Datastc("services")
       data = Services;
-      console.log("items2", data);
 
     }
     if (props.title === "Products") {
       const { Products } = Datastc("products")
       data = Products;
-      console.log("items3", data);
 
     }
   } else {
     const { Industries } = Datastc("industries")
     data = Industries;
-    console.log("itemsA", data);
   }
 
 
