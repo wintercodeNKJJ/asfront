@@ -64,7 +64,7 @@ const Category = (prop) => {
 
       {/* <!-- top news block end--> */}
 
-      <OptionsItems />
+      <OptionsItems title="Industries" />
 
 
       <PatnersLogo />

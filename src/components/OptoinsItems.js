@@ -8,12 +8,26 @@ import urlFor from "../utility/imageUrl";
  * Should return items coresponding to the  required category
  * @returns Options items from industries
  */
-const OptionsItems = () => {
+const OptionsItems = ({ searchtitle }) => {
 
+  const { Industries } = Datastc("industries")
+  const { Services } = Datastc("services")
+  const { Products } = Datastc("products")
   let data = null;
-  const { Industries } = Datastc("industries");
-  data = Industries;
-  console.log("items1", data);
+  switch (searchtitle) {
+    case "Industries":
+      data = Industries;
+      break;
+    case "Services":
+      data = Services;
+      console.log("services fetch")
+      break;
+    default:
+      data = Products;
+      break;
+  }
+  // const { Industries } = Datastc("industries");
+  // data = Industries;
 
   return (
     <div>
@@ -21,7 +35,7 @@ const OptionsItems = () => {
       <div className="bg-gray-300 lg:px-40 pb-14">
 
         <div className="flex justify-start mx-10">
-          <span className="font-bold text-2xl mt-5 mb-3 font-serif"> Industries </span>
+          <span className="font-bold text-3xl mt-5 mb-3 font-serif"> {searchtitle} </span>
         </div>
 
         <div className="h-1 bg-gray-400 rounded-box mb-5 mx-10 lg:mx-0"></div>
@@ -29,7 +43,7 @@ const OptionsItems = () => {
         <div className="h-full px-4 grid sm:grid-cols-2 md:grid-cols-5">
           {/* <!-- item 1 --> */}
 
-          {Industries.map((item) => (
+          {data.map((item) => (
             <div className="flex justify-center">
               <div className="col-span-1 mx-4 my-4">
                 <a href={item.title} className="hover:opacity-60">

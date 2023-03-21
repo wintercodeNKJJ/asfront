@@ -77,7 +77,7 @@ const footer = () => {
           </div>
 
           {/* <!-- footer band --> */}
-          <div className="h-10 flex bg-green-300 px-28 justify-end">
+          <div className="h-10 flex bg-green-700 px-28 justify-end">
             <div className="flex items-center">
               <img src={ASL} alt="As logo" className="h-8" />
             </div>

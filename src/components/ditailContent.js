@@ -19,6 +19,7 @@ import Techno from "../assets/techno.jpeg";
  * @returns A ditail page describing the item
  */
 const DitailsContent = (prop) => {
+  console.log("prop ditails", prop.title)
   return (
     <div>
 
@@ -97,9 +98,9 @@ const DitailsContent = (prop) => {
       {/* <!-- top news block end--> */}
 
 
-      <span className="font-bold text-3xl mt-5 mb-3 font-serif">Similar topics to {prop.title} </span>
+      {/* <span className="font-bold text-3xl mt-5 mb-3 font-serif">Similar topics to {prop.title} </span> */}
 
-      <OptionsItems />
+      <OptionsItems searchtitle={prop.title} />
 
     </div>
   );

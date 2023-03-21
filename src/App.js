@@ -55,19 +55,19 @@ function App() {
 
             {Industries.map((link) => (
               <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title={link.title.replace(" ", "_")} />
+                <Ditails title="Industries" search={link.title.replace(" ", "_")} />
               </Route>
             ))}
 
             {Services.map((link) => (
               <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title={link.title.replace(" ", "_")} />
+                <Ditails title="Services" search={link.title.replace(" ", "_")} />
               </Route>
             ))}
 
             {Products.map((link) => (
               <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title={link.title.replace(" ", "_")} />
+                <Ditails title="Products" search={link.title.replace(" ", "_")} />
               </Route>
             ))}
 

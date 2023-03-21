@@ -12,13 +12,13 @@ const Header = () => {
         <div className="col-span-1"></div>
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
-            <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
+            <li className="h-full flex items-center hover:bg-green-300 hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="https://ecomm-wintercodenkjj.vercel.app/">E Eommerce</a></li>
-            <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
+            <li className="h-full flex items-center hover:bg-green-300 hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="/News">Latest news</a></li>
-            <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="bordered border-r-2 px-2"
+            <li className="h-full flex items-center hover:bg-green-300 hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="/Aboutus">Who we are</a></li>
-            <li className="h-full flex items-center hover:bg-green-300 hover:text-black"><a className="px-2" href="test.html">English</a>
+            <li className="h-full flex items-center hover:bg-green-300 hover:text-black duration-500"><a className="px-2" href="test.html">English</a>
             </li>
           </ul>
         </div>
