@@ -42,8 +42,10 @@ const ImageSlider = () => {
                         </p>
                       </div>
                       <div className=" my-5">
-                        <button className="flex items-center gap-2">
-                          learn More <AiOutlineArrowRight /> </button>
+                        <a href={"/" + item.title.replace(" ", "_")}>
+                          <button className="flex items-center gap-2">
+                            learn More <AiOutlineArrowRight /> </button>
+                        </a>
                       </div>
                     </div>
                   </div>
