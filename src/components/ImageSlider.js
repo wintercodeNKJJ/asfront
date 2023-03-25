@@ -48,7 +48,7 @@ const ImageSlider = () => {
                   </div>
                   {/* <!-- image --> */}
                   <div className="md:col-span-2">
-                    <img src={urlFor(item.mainImage).url} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
+                    <img src={urlFor(item.mainImage)} alt="" className="h-0 md:h-60 w-0 md:w-full object-cover" />
                   </div>
                 </div>
               </div>

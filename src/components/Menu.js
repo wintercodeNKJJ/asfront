@@ -42,16 +42,16 @@ const Menu = (props) => {
 
       <Dropdown
         trigger="hover"
-        class=" slotion border-b-4 border-b-green-200 bg-green-200 animunder after:w-0"
+        class=" slotion border-b-4 border-b-[#347423] bg-[#347423] animunder after:w-0"
         label={props.title}
         arrowIcon={false}
         size="lg"
         href={`/${props.title}`}
 
       >
-        <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-green-200 grid md:grid-cols-3 lg:grid-cols-5 gap-8 w-full h-full -my-2">
+        <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-[#347423] grid md:grid-cols-3 lg:grid-cols-5 gap-8 w-full h-full -my-2">
           {data.map((Itm) => (
-            <div className="text-black w-20 md:w-28 lg:w-40 relative hover:bg-green-700 duration-500 p-2 rounded-lg hover:text-white">
+            <div className="w-20 md:w-28 lg:w-40 relative hover:bg-gray-300 duration-500 p-2 rounded-lg hover:text-black text-white">
               <a href={"/" + Itm.title.replace(" ", "_")}>
                 <h1 className="font-bold text-xl">{Itm.title.replace("_", " ")}</h1>
                 <div className="bg-green-800 h-0.5 w-24 my-2"></div>

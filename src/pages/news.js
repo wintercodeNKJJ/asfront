@@ -65,7 +65,7 @@ const NewsLatest = () => {
                 <div className="h-1 bg-green-500 w-24"></div>
 
                 <div className="flex justify-start my-3">
-                  <span><a href={"/newsDitail/" + news._id}>Learn More</a></span>
+                  <span><a href={"/" + news._id}>Learn More</a></span>
                 </div>
               </div>
             ))}
@@ -91,7 +91,7 @@ const NewsLatest = () => {
                 <div className="h-1 bg-green-500 w-24"></div>
 
                 <div className="flex justify-start my-3">
-                  <span><a href={"/newsDitail/" + news._id}>Learn More</a></span>
+                  <span><a href={"/" + news._id}>Learn More</a></span>
                 </div>
               </div>
             ))}
@@ -117,7 +117,7 @@ const NewsLatest = () => {
                 <div className="h-1 bg-green-500 w-24"></div>
 
                 <div className="flex justify-start my-3">
-                  <span><a href={"/newsDitail/" + news._id}>Learn More</a></span>
+                  <span><a href={"/" + news._id}>Learn More</a></span>
                 </div>
               </div>
             ))}

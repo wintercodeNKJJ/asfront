@@ -15,6 +15,7 @@ const OptionsItems = ({ searchtitle }) => {
   const { Services } = Datastc("services")
   const { Products } = Datastc("products")
   let data = null;
+  console.log('search title', searchtitle)
   switch (searchtitle) {
     case "Industries":
       data = Industries;

@@ -1,6 +1,5 @@
 import Datastc from "../dbitems/dbit";
 import PatnersLogo from "../components/PatnersLogo";
-import News from "../components/News";
 import DitailsContent from "../components/ditailContent";
 
 /**
@@ -46,8 +45,6 @@ const Ditails = (prop) => {
       {data && <DitailsContent data={data} title={prop.title} />}
 
       <PatnersLogo />
-
-      <News />
     </div >
   );
 }

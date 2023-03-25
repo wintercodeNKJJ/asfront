@@ -20,16 +20,16 @@ import Techno from "../assets/techno.jpeg";
  */
 const DitailsContent = (prop) => {
   return (
-    <div>
+    <div className="font-serif">
 
       {/* <!-- page tite begin --> */}
-      <div className=" lg:px-40 px-10 flex justify-start bg-green-200">
+      <div className=" lg:px-40 px-10 flex justify-start bg-white items-baseline gap-4">
         <h1 className="text-5xl font-serif font-extrabold my-3">{prop.data.title.replace("_", " ")}</h1>
+        <span className=" font-light text-lg font-serif">{prop.data.subtitle.substring(0, 100) + '...'}</span>
       </div>
       {/* <!-- page tite end --> */}
 
-      {/* <!-- tom landing picture begin --> */}
-      <div className="flex justify-between bg-cover relative h-56">
+      {/* <div className="flex justify-between bg-cover relative h-56">
         <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} className="w-full object-cover h-full" alt={prop.data.title} />
         <div className="px-4 lg:px-40 text-black text-3xl font-serif py-2 flex flex-col gap-4 w-full md:w-2/4 lg:h-80 h-52 absolute">
           <h2 className=" h-48 overflow-hidden ">
@@ -37,8 +37,7 @@ const DitailsContent = (prop) => {
           </h2>
         </div>
 
-      </div>
-      {/* <!-- tom landing picture end --> */}
+      </div> */}
 
       <div className="grid md:grid-cols-3 gap-2 py-10 px-8 md:px-20 lg:px-40">
 
