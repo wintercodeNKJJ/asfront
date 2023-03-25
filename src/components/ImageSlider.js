@@ -1,3 +1,4 @@
+import { AiOutlineArrowRight } from "react-icons/ai";
 import Datastc from "../dbitems/dbit";
 import urlFor from "../utility/imageUrl";
 import { Carousel } from "flowbite-react";
@@ -32,7 +33,7 @@ const ImageSlider = () => {
 
                 <div className="grid grid-cils-1 md:grid-cols-5">
                   {/* <!-- text --> */}
-                  <div className="col-span-3 flex justify-center bg-green-300 h-56 md:h-60">
+                  <div className="col-span-3 flex justify-center bg-[#347423] h-56 md:h-60 text-white">
                     <div className="w-96">
                       <h1 className="text-4xl font-bold font-serif my-4">{item.title}</h1>
                       <div className="">
@@ -41,8 +42,8 @@ const ImageSlider = () => {
                         </p>
                       </div>
                       <div className=" my-5">
-                        <button className="bg-gradient-to-br from-green-300 to-green-400 w-24">
-                          learn More </button>
+                        <button className="flex items-center gap-2">
+                          learn More <AiOutlineArrowRight /> </button>
                       </div>
                     </div>
                   </div>
