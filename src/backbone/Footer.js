@@ -19,13 +19,19 @@ const footer = () => {
   const { Footer } = DataAS("footer")
   let show = true;
   let ASs;
-  // let ASc;
+  let AShours;
+  let ASnumber;
+  let ASlocation;
+  let ASemail;
 
   if (Footer.length <= 1) {
     show = false;
   } else {
     ASs = Footer.find(data => (data.slug.current === "africa-systems"))
-    // ASc = Footer.find(data => (data.slug.current === "contact-info"))
+    AShours = Footer.find(data => (data.slug.current === "open-hours"))
+    ASnumber = Footer.find(data => (data.slug.current === "number"))
+    ASlocation = Footer.find(data => (data.slug.current === "location"))
+    ASemail = Footer.find(data => (data.slug.current === "email"))
   }
 
   return (
@@ -56,10 +62,10 @@ const footer = () => {
                     <div class="flex flex-col items-start text-sm">
                       <p class="font-bold text-base my-1">Address</p>
                       <div class="flex">
-                        <p>Douala,Cameroon</p>
+                        <p>Current address</p>
                       </div>
                       <div class="flex">
-                        <p>Rue Fokou Douche</p>
+                        <p>{ASlocation.body}</p>
                       </div>
                     </div>
                   </div>
@@ -71,11 +77,11 @@ const footer = () => {
                       <p class="font-bold text-base my-1">Contact</p>
                       <div class="flex">
                         <p class="font-bold">phone:</p>
-                        <p>+239829883</p>
+                        <p>{ASnumber.body}</p>
                       </div>
                       <div class="flex">
                         <p class="font-bold">Email:</p>
-                        <p>contact@gmail.com</p>
+                        <p>{ASemail.body}</p>
                       </div>
                     </div>
                   </div>
@@ -86,11 +92,10 @@ const footer = () => {
                     <div class="flex flex-col items-start text-sm">
                       <p class="font-bold text-base my-1">Open Hours</p>
                       <div class="flex">
-                        <p class="font-bold">Mon-Sat: 11AM</p>
-                        <p>-23PM</p>
+                        <p class="font-bold">{AShours.body}</p>
                       </div>
                       <div class="flex">
-                        <p>Sunday: Closed</p>
+                        <p>Saturday & Sunday: Closed</p>
                       </div>
                     </div>
                   </div>
@@ -112,7 +117,7 @@ const footer = () => {
           </div>
 
           <div class="h-10 flex bg-[#4d4643] px-28 justify-between items-center text-white">
-            <div>&copy;<span class="font-bold">AfricaSyetems 2023</span>.All rights reserved</div>
+            <div>&copy;<span class="font-bold">AfricaSyetems 2023</span>. All rights reserved</div>
             <div class="flex items-center">
               <img src={ASL} alt="As logo" class="h-8" />
             </div>

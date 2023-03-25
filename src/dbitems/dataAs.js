@@ -18,7 +18,7 @@ const DataAS = (Target) => {
 
     let query = `*[_type == "content" && slug.current in ["our-vission","our-mission","who-we-are"] ] | order(publishedAt desc)`
     let query1 = `*[_type == "content" && slug.current == "power-of-evolution"] | order(publishedAt desc)`
-    let query2 = `*[_type == "content" && slug.current in ["africa-systems","contact-info"]]`
+    let query2 = `*[_type == "content" && slug.current in ["africa-systems","open-hours","location","number","email"]]`
 
     switch (Target) {
       case "vission":
