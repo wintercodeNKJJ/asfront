@@ -6,6 +6,8 @@ import TeamBest from "../components/TeamBest";
 import HomeCont from "../dbitems/homeContent";
 import Techno from "../assets/techno.jpeg";
 import Automobile from "../assets/Automobile.png";
+import DataAS from "../dbitems/dataAs";
+
 
 
 /**
@@ -15,9 +17,18 @@ import Automobile from "../assets/Automobile.png";
  */
 const Home = () => {
   const { TopContent } = HomeCont("top");
+  const { Footer } = DataAS("footer")
+
+  let ASnumber;
+  let ASlocation;
+  let ASemail;
+
   let show = false
-  if (TopContent.length >= 1) {
+  if (TopContent.length >= 1 && Footer.length >= 1) {
     show = true;
+    ASnumber = Footer.find(data => (data.slug.current === "number"))
+    ASlocation = Footer.find(data => (data.slug.current === "location"))
+    ASemail = Footer.find(data => (data.slug.current === "email"))
   }
 
   return (
@@ -102,13 +113,15 @@ const Home = () => {
 
                 <div className="bg-green-200 p-5">
                   <div>
-                    <h1 className="font-serif font-bold text-3xl my-4">{TopContent[0].top.find(data => data.slug.current === "contact-info").title}
+                    <h1 className="font-serif font-bold text-3xl my-4">contact-info
                     </h1>
                   </div>
                   <div className="h-1 w-24 bg-green-600"></div>
                   <div className="my-4 flex flex-col gap-2">
                     <h3>
-                      {TopContent[0].top.find(data => data.slug.current === "contact-info").body}
+                      {ASlocation.body}<br />
+                      {ASnumber.body}<br />
+                      {ASemail.body}
                     </h3>
                   </div>
                 </div>
