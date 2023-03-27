@@ -1,8 +1,8 @@
-import ImageSlider from "../components/ImageSlider";
+// import ImageSlider from "../components/ImageSlider";
 import Tracking from "../assets/vehicle_tracking.jpeg";
-import PatnersLogo from "../components/PatnersLogo";
-import power from "../assets/power.png";
-import News from "../components/News";
+// import PatnersLogo from "../components/PatnersLogo";
+// import power from "../assets/power.png";
+// import News from "../components/News";
 import OptionsItems from "../components/OptoinsItems";
 
 const Category = (prop) => {
@@ -12,11 +12,11 @@ const Category = (prop) => {
   return (
     <div>
       {/* <!-- page tite begin --> */}
-      <div className=" lg:px-40 px-10 flex justify-start bg-green-200">
+      <div className=" lg:px-40 px-10 flex justify-start">
         <h1 className="text-5xl font-serif font-extrabold my-3">{Title}</h1>
       </div>
       {/* <!-- page tite end --> */}
-      <ImageSlider />
+      {/* <ImageSlider /> */}
       {/* <!-- top news block begin --> */}
 
       <div className=" px-8 lg:px-40 py-10 grid lg:grid-cols-2 grid-cols-1 gap-8">
@@ -64,12 +64,10 @@ const Category = (prop) => {
 
       {/* <!-- top news block end--> */}
 
-      <OptionsItems title="Industries" />
+      <OptionsItems searchtitle={Title} />
 
-
-      <PatnersLogo />
       {/* <!-- Succeses begin --> */}
-      <div className="grid col-span-3 lg:grid-cols-4 lg:px-40 px-4 py-28 gap-5 bg-gray-300">
+      {/* <div className="grid col-span-3 lg:grid-cols-4 lg:px-40 px-4 py-28 gap-5 bg-gray-300">
 
         <div className="col-span-3 lg:col-span-1 flex justify-center">
           <img src={power} alt="power" className="h-52 lg:h-60" />
@@ -96,10 +94,8 @@ const Category = (prop) => {
           </div>
         </div>
 
-      </div>
+      </div> */}
       {/* <!-- Succeses end --> */}
-
-      <News />
     </div >
   );
 }

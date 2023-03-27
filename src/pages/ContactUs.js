@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiFillClockCircle, AiFillMail, AiFillPhone } from 'react-icons/ai';
 import { TiLocation } from 'react-icons/ti'
 
 import ASL from '../assets/ASL.png'
 
 const ContactUs = () => {
+
+  const [Subject, setSubject] = useState('')
+  const [Content, setContent] = useState('')
+  const [Name, setName] = useState('')
+  const [Email, setEmail] = useState('')
+
   return (
     <div>
       <div className="px-11 md:px-20 lg:px-40 mt-10">
@@ -26,15 +32,17 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="flex p-6 bg-gray-200 gap-2">
-            <div className="rounded-full p-2 text-green-700">
-              <AiFillMail size={30} />
+          <a href='mailto:afria@gmail.com'>
+            <div className="flex p-6 bg-gray-200 gap-2">
+              <div className="rounded-full p-2 text-green-700">
+                <AiFillMail size={30} />
+              </div>
+              <div className="flex flex-col">
+                <div className="font-bold text-lg">Email us</div>
+                <div className="text-sm">Africa@gmail.com</div>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <div className="font-bold text-lg">Email us</div>
-              <div className="text-sm">Africa@gmail.com</div>
-            </div>
-          </div>
+          </a>
 
           <div className="flex p-6 bg-gray-200 gap-2">
             <div className="rounded-full p-2 text-green-700">
@@ -62,24 +70,21 @@ const ContactUs = () => {
           <div className="w-1/5 hidden md:block ">
             <img src={ASL} alt="img" className="h-full object-cover" />
           </div>
-          <form method='POST'>
+          <form method='POST' className='w-full'>
             <div className="flex flex-col w-full gap-2 md:gap-8 p-4 bg-gray-200">
               <div className="md:flex-row flex-col flex justify-between gap-2 md:gap-8">
-                <input type="text" placeholder="Name" className="w-full border border-gray-300 p-2 rounded-[4px]" />
-                <input type="email" placeholder="Email@gmail.com" className="w-full border border-gray-300 p-2 rounded-[4px]" />
-                <input type="tel" placeholder="+12334222" className="w-full border border-gray-300 p-2 rounded-[4px]" />
+                <input type="text" placeholder="Name" className="w-full border border-gray-300 p-2 rounded-[4px]" onChange={(e) => { setName(e.target.value) }} />
+                <input type="email" placeholder="Email@gmail.com" className="w-full border border-gray-300 p-2 rounded-[4px]" onChange={(e) => { setEmail(e.target.value) }} />
               </div>
               <div className="md:flex-row flex-col flex justify-between gap-2 md:gap-8">
-                <input type="date" placeholder="23/02/03" className="w-full border border-gray-300 p-2 rounded-[4px]" />
-                <input type="time" placeholder="20:30" className="w-full border border-gray-300 p-2 rounded-[4px]" />
-                <input type="text" placeholder="service request" className="w-full border border-gray-300 p-2 rounded-[4px]" />
+                <input type="text" placeholder="Subject" className="w-full border border-gray-300 p-2 rounded-[4px]" onChange={(e) => { setSubject(e.target.value) }} />
               </div>
               <div className="flex">
                 <textarea name="content" id="mailcontent" placeholder="Message..."
-                  className="w-full h-96 rounded-md border border-gray-300 p-2"></textarea>
+                  className="w-full h-96 rounded-md border border-gray-300 p-2" onChange={(e) => { setContent(e.target.value) }} ></textarea>
               </div>
               <div className="flex justify-around">
-                <button type="submit" className="btn btn-outline btn-success rounded-full w-40">Send</button>
+                <a href={`mailto:africa@gmail.com?subject=${Subject}&body=${Name}..${Email}..${Content}`} className="btn btn-outline btn-success rounded-full w-40">Send</a>
                 <button type="reset" className="btn btn-outline btn-error rounded-full w-40">Reset</button>
               </div>
             </div>
