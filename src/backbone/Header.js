@@ -1,7 +1,7 @@
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
 import MobileDropDown from "./mobiledropdown";
-import { AiOutlineSearch } from 'react-icons/ai'
+// import { AiOutlineSearch } from 'react-icons/ai'
 
 const Header = () => {
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
-              href="https://ecomm-wintercodenkjj.vercel.app/">E Commerce</a></li>
+              href="/">E Commerce</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="/News">Latest news</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="px-2"

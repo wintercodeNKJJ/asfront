@@ -1,6 +1,7 @@
 import TeamMemers from "../dbitems/dataTeam";
 import urlFor from "../utility/imageUrl";
 import { AiFillFacebook, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
+import ASL from '../assets/ASL.png'
 
 /**
  * This component shows the best 3 team members of africa systems
@@ -45,10 +46,10 @@ const TeamBest = () => {
                 class="flex mx-auto text-white hover:text-black hover:bg-gradient-to-br hover:from-white hover:to-[#347423] duration-500 flex-col justify-end items-center p-4 rounded-md bg-gradient-to-br from-[#4d4643] to-[#347423] shadow-lg w-72">
 
                 <div class="">
-                  <img src={urlFor(item.mainImage)} alt="" class="h-32 shadow rounded-full bg-white" />
+                  <img src={item.mainImage ? urlFor(item.mainImage) : ASL} alt="" class="h-32 shadow rounded-full bg-white" />
                 </div>
 
-                <div class="w-48 px-4 py-6 flex flex-col gap-4 justify-center font-serif">
+                <div class="w-48 py-6 flex flex-col items-center gap-4 justify-center font-serif">
                   <h1 class="text-2xl font-bold font-serif">{item.title}</h1>
                   <p class="text-center">{item.post}</p>
                 </div>
