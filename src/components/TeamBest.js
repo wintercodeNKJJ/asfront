@@ -1,5 +1,6 @@
 import TeamMemers from "../dbitems/dataTeam";
 import urlFor from "../utility/imageUrl";
+import { AiFillFacebook, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 
 /**
  * This component shows the best 3 team members of africa systems
@@ -26,28 +27,39 @@ const TeamBest = () => {
       {show &&
         <div>
           {showtitle &&
-            <div className="lg:mx-44 mx-10 my-8">
-              <div className="w-3/6">
-                <h1 className="font-bold text-3xl font-serif">{Title[0].title}</h1>
-                <p>{Title[0].body}</p>
+            <div className="lg:mx-44 mx-10 my-8 flex justify-center">
+              <div className="w-3/6 flex flex-col items-center">
+                <h1 className="font-bold text-3xl font-serif text-center">{Title[0].title}</h1>
+                <p className="text-center">{Title[0].body}</p>
               </div>
             </div>
           }
 
           {/* <!-- items begin--> */}
-          <div className=" h-full grid grid-cols-1 md:grid-cols-2 m-10">
+          <div className=" h-full gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-10">
             {/* <!-- coligue 1 --> */}
 
             {TeamMembers.map(item => (
-              <div className="relative mt-14 ml-24 flex justify-end bg-[#347423] h-44 w-72">
-                {/* <!-- image --> */}
-                <div className="absolute -top-8 -left-24">
-                  <img src={urlFor(item.mainImage)} alt="" className="h-44 bg-[#4d4643] rounded-full" />
+
+              <div
+                class="flex mx-auto text-white hover:text-black hover:bg-gradient-to-br hover:from-white hover:to-[#347423] duration-500 flex-col justify-end items-center p-4 rounded-md bg-gradient-to-br from-[#4d4643] to-[#347423] shadow-lg w-72">
+
+                <div class="">
+                  <img src={urlFor(item.mainImage)} alt="" class="h-32 shadow rounded-full bg-white" />
                 </div>
-                {/* <!-- Name and Position --> */}
-                <div className="w-48 px-2 py-2 flex flex-col gap-4 justify-center text-black">
-                  <h1 className="text-2xl font-bold font-serif">{item.title}</h1>
-                  <p>{item.post}</p>
+
+                <div class="w-48 px-4 py-6 flex flex-col gap-4 justify-center font-serif">
+                  <h1 class="text-2xl font-bold font-serif">{item.title}</h1>
+                  <p class="text-center">{item.post}</p>
+                </div>
+                <div class="flex justify-center gap-2 p-2 w-full items-center">
+                  <div class="w-full h-[1px] bg-white rounded-full overflow-hidden">
+                  </div>
+                  <div class="rounded-full p-1 border"><a href="https://www.twitter.com"><AiFillTwitterCircle /></a></div>
+                  <div class="rounded-full p-1 border"><AiFillLinkedin href="https://www.linkedin.com" /></div>
+                  <div class="rounded-full p-1 border"><AiFillFacebook href="https://www.facebook.com" /></div>
+                  <div class="w-full h-[1px] bg-white rounded-full overflow-hidden">
+                  </div>
                 </div>
               </div>
             ))}

@@ -48,7 +48,7 @@ const footer = () => {
                   <img src={ASL} alt="As Logo" class="h-11" />
                   <p class="text-xl font-bold">Africa Systems</p>
                 </div>
-                <div>
+                <div className="text-justify">
                   <p>{ASs.body}</p>
                 </div>
               </div>
@@ -100,19 +100,18 @@ const footer = () => {
                     </div>
                   </div>
                 </div>
-
+                <div class="p-1">
+                  <div class="text-lg font-bold mb-2">Follow us</div>
+                  <div class="flex gap-2">
+                    <div class="rounded-full border p-3"><AiFillTwitterCircle size={25} /></div>
+                    <div class="rounded-full border p-3"><AiFillFacebook size={25} /></div>
+                    <div class="rounded-full border p-3"><AiFillLinkedin size={25} /></div>
+                    <div class="rounded-full border p-3"><AiFillInstagram size={25} /></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="p-1">
-              <div class="text-lg font-bold mb-4">Follow us</div>
-              <div class="flex gap-2">
-                <div class="rounded-full border p-3"><AiFillTwitterCircle size={25} /></div>
-                <div class="rounded-full border p-3"><AiFillFacebook size={25} /></div>
-                <div class="rounded-full border p-3"><AiFillLinkedin size={25} /></div>
-                <div class="rounded-full border p-3"><AiFillInstagram size={25} /></div>
-              </div>
-            </div>
 
           </div>
 

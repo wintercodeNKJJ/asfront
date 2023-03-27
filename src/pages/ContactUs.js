@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { AiFillClockCircle, AiFillMail, AiFillPhone } from 'react-icons/ai';
 import { TiLocation } from 'react-icons/ti'
+import power from '../assets/power.png'
 
-import ASL from '../assets/ASL.png'
+// import ASL from '../assets/ASL.png'
 
 const ContactUs = () => {
 
@@ -17,9 +18,10 @@ const ContactUs = () => {
         <div className="flex justify-center items-center m-4 text-3xl">
           <span>Do you have a project?, Lets start</span>
         </div>
-        <div className="h-96 mb-5 border border-gray-300 w-full bg-gray-300">
+        <div className='flex justify-center text-center px-10 my-6 font-extralight text-lg'><span>Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progess, giving birth to evolution</span></div>
+        {/* <div className="h-96 mb-5 border border-gray-300 w-full bg-gray-300">
           map
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
           <div className="flex p-6 bg-gray-200 gap-2">
@@ -67,8 +69,8 @@ const ContactUs = () => {
         </div>
 
         <div className="h-full flex rounded-lg overflow-hidden mt-5 mb-20">
-          <div className="w-1/5 hidden md:block ">
-            <img src={ASL} alt="img" className="h-full object-cover" />
+          <div className="w-1/2 hidden md:block ">
+            <img src={power} alt="img" className="h-full object-cover" />
           </div>
           <form method='POST' className='w-full'>
             <div className="flex flex-col w-full gap-2 md:gap-8 p-4 bg-gray-200">
