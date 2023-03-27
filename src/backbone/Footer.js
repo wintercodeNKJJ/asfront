@@ -40,7 +40,7 @@ const footer = () => {
 
         <div>
           <div
-            class=" h-full bg-[url('/src/assets/logo/footer.png')] bg-cover grid grid-cols-1 md:grid-cols-4 px-10 py-5 gap-3 text-white">
+            class=" h-full bg-[url('/src/assets/logo/footer.png')] bg-cover grid grid-cols-1 md:grid-cols-3 px-10 py-5 gap-3 text-white md:px-20 lg:px-40">
 
             <div class="col-span-1 ml-5">
               <div class="w-52">

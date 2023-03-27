@@ -19,9 +19,9 @@ const ContactUs = () => {
           <span>Do you have a project?, Lets start</span>
         </div>
         <div className='flex justify-center text-center px-10 my-6 font-extralight text-lg'><span>Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progess, giving birth to evolution</span></div>
-        {/* <div className="h-96 mb-5 border border-gray-300 w-full bg-gray-300">
-          map
-        </div> */}
+        <div className="h-[400px] mb-5 border border-gray-300 w-full bg-gray-300">
+          <iframe title='map' class="border-none w-full h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.8904535688002!2d9.70221231532612!3d4.04277094813507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128d71ccd2df%3A0xe0f23721bbb97c48!2sFokou%20Douche!5e0!3m2!1sfr!2scm!4v1630658086620!5m2!1sfr!2scm" loading="lazy" allowfullscreen=""></iframe>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
           <div className="flex p-6 bg-gray-200 gap-2">
@@ -86,8 +86,8 @@ const ContactUs = () => {
                   className="w-full h-96 rounded-md border border-gray-300 p-2" onChange={(e) => { setContent(e.target.value) }} ></textarea>
               </div>
               <div className="flex justify-around">
-                <a href={`mailto:africa@gmail.com?subject=${Subject}&body=${Name}..${Email}..${Content}`} className="btn btn-outline btn-success rounded-full w-40">Send</a>
-                <button type="reset" className="btn btn-outline btn-error rounded-full w-40">Reset</button>
+                <a href={`mailto:africa@gmail.com?subject=${Subject}&body=${Name}..${Email}..${Content}`} className="btn btn-outline border-[#347423] hover:bg-[#347423] rounded-full w-40">Send</a>
+                <button type="reset" className="btn btn-outline border-[#4d4643] hover:bg-[#4d4643] rounded-full w-40">Reset</button>
               </div>
             </div>
           </form>
