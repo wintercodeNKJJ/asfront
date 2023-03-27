@@ -52,7 +52,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="h-12 bg-green-200 visible md:hidden flex px-8 justify-between">
+      <div className="h-12 bg-gradient-to-r from-white to-[#4d4643] visible md:hidden flex px-8 justify-between">
         <div className="flex justify-center items-center col-span-1">
           <img src={ASL} alt="As Logo" className="h-10" />
         </div>

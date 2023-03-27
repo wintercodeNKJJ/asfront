@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import Datastc from "../dbitems/dbit";
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 const MobileDropDown = () => {
 
@@ -11,6 +12,9 @@ const MobileDropDown = () => {
   const { Services } = Datastc("services");
   const { Products } = Datastc("products");
   const [show, setShow] = useState(false)
+  const [inShow, setInShow] = useState(false)
+  const [serShow, setSerShow] = useState(false)
+  const [prodShow, setProdShow] = useState(false)
 
   return (
     <div>
@@ -23,59 +27,53 @@ const MobileDropDown = () => {
         </svg>
       </div>
 
-      <div id="dropdownMenu" className={show ? "z-40 visible divide-gray-100 w-full bg-green-300 opacity-90 inset-y-auto absolute m-0 left-0" : "z-40 hidden divide-gray-100 w-full bg-green-300 opacity-90"}
+      <div id="dropdownMenu" className={show ? "z-40 visible divide-gray-100 w-full bg-[#347423] text-white opacity-90 inset-y-auto absolute m-0 left-0" : "z-40 hidden divide-gray-100 w-full bg-green-300 opacity-90"}
       >
         <div className="w-full ">
           <ul className="p-4 font-light">
             <li className="border-b-4 border-transparent"><a href="/"
-              className="w-fit border-b-2 border-green-700">Home</a></li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+              className="w-fit border-b-2 ">Home</a></li>
 
             {/* Industries Menu */}
-            <li className="border-b-4 border-transparent"><a href="/Industries"
-              className="w-fit border-b-2 border-green-700">Industries</a>
-              <ul className="grid grid-cols-3 gap-2">
+            <li className="border-b-4 border-transparent"><div
+              className="w-full border-b-2  flex justify-between"><a href="/Industries">Industries</a> {inShow ? <AiOutlineMinus onClick={() => setInShow(!inShow)} /> : <AiOutlinePlus onClick={() => setInShow(!inShow)} />}</div>
+              <ul className={inShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Industries.map((data) => (
                   <li className="flex justify-center"><a href={"/" + data.title}>{data.title}</a></li>
                 ))}
               </ul>
             </li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
 
             {/* Services Menu */}
-            <li className="border-b-4 border-transparent"><a href="/Services"
-              className="w-fit border-b-2 border-green-700">Servicies</a>
-              <ul className="grid grid-cols-3 gap-2">
+            <li className="border-b-4 border-transparent"><div
+              className="w-full border-b-2  flex justify-between"><a href="/Services">Services</a> {serShow ? <AiOutlineMinus onClick={() => setSerShow(!serShow)} /> : <AiOutlinePlus onClick={() => setSerShow(!serShow)} />}</div>
+              <ul className={serShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Services.map((data) => (
                   <li className="flex justify-center"><a href={"/" + data.title}>{data.title}</a></li>
                 ))}
               </ul>
             </li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
 
             {/* Products Menu */}
-            <li className="border-b-4 border-transparent"><a href="/"
-              className="w-fit border-b-2 border-green-700">Products</a>
-              <ul className="grid grid-cols-3 gap-2">
+            <li className="border-b-4 border-transparent"><div
+              className="w-full border-b-2  flex justify-between"><a href="/Products">Products</a> {prodShow ? <AiOutlineMinus onClick={() => setProdShow(!prodShow)} /> : <AiOutlinePlus onClick={() => setProdShow(!prodShow)} />}</div>
+              <ul className={prodShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Products.map((data) => (
                   <li className="flex justify-center"><a href={"/" + data.title.replace("_", " ")}>{data.title.replace("_", " ")}</a></li>
                 ))}
               </ul>
             </li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
 
             {/* other links */}
             <li className="border-b-4 border-transparent"><a href="/nolink"
-              className="w-fit border-b-2 border-green-700">Research &
+              className="w-fit border-b-2 ">Research &
               Development</a></li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
             <li className="border-b-4 border-transparent"><a href="/Aboutus"
-              className="w-fit border-b-2 border-green-700">Who we are</a></li>
-            <div className="w-full px-4 text-gray-600 rounded-full m-0.5 p-0.5"><hr /></div>
+              className="w-fit border-b-2 ">Who we are</a></li>
             <li className="border-b-4 border-transparent"><a href="/News"
-              className="w-fit border-b-2 border-green-700">Latest news</a></li>
+              className="w-fit border-b-2 ">Latest news</a></li>
             <li className="border-b-4 border-transparent"><a href="https://ecomm-wintercodenkjj.vercel.app/"
-              className="w-fit border-b-2 border-green-700">E Commerce</a></li>
+              className="w-fit border-b-2 ">E Commerce</a></li>
           </ul>
         </div>
       </div>
