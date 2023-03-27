@@ -1,5 +1,6 @@
 import Ndatastc from "../dbitems/dbnews";
 import urlFor from "../utility/imageUrl";
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 /**
  * this page contains the news of AS activites
@@ -62,10 +63,10 @@ const NewsLatest = () => {
                   <p>{news.body.children.text}</p>
                 </div>
 
-                <div className="h-1 bg-green-500 w-24"></div>
+                <div className="h-1 bg-[#347423] w-24"></div>
 
-                <div className="flex justify-start my-3">
-                  <span><a href={"/" + news._id}>Learn More</a></span>
+                <div className="flex justify-start my-3 w-28">
+                  <span className="w-full"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn More <AiOutlineArrowRight /></a></span>
                 </div>
               </div>
             ))}
@@ -88,10 +89,10 @@ const NewsLatest = () => {
                   <p>{news.body.children.text}</p>
                 </div>
 
-                <div className="h-1 bg-green-500 w-24"></div>
+                <div className="h-1 bg-[#347423] w-24"></div>
 
-                <div className="flex justify-start my-3">
-                  <span><a href={"/" + news._id}>Learn More</a></span>
+                <div className="flex justify-start my-3 w-28">
+                  <span className="w-full"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn More <AiOutlineArrowRight /></a></span>
                 </div>
               </div>
             ))}
@@ -114,10 +115,10 @@ const NewsLatest = () => {
                   <p>{news.body.children.text}</p>
                 </div>
 
-                <div className="h-1 bg-green-500 w-24"></div>
+                <div className="h-1 bg-[#347423] w-24"></div>
 
-                <div className="flex justify-start my-3">
-                  <span><a href={"/" + news._id}>Learn More</a></span>
+                <div className="flex justify-start my-3 w-28">
+                  <span className="w-full"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn More <AiOutlineArrowRight /></a></span>
                 </div>
               </div>
             ))}

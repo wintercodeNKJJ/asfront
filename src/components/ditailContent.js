@@ -23,8 +23,8 @@ const DitailsContent = (prop) => {
     <div className="font-serif">
 
       {/* <!-- page tite begin --> */}
-      <div className=" lg:px-40 px-10 flex justify-start bg-white items-baseline gap-4">
-        <h1 className="text-5xl font-serif font-extrabold my-3">{prop.data.title.replace("_", " ")}</h1>
+      <div className=" lg:px-40 px-10 bg-white">
+        <h1 className="text-5xl font-serif font-extrabold mt-3">{prop.data.title.replace("_", " ")}</h1>
         <span className=" font-light text-lg font-serif">{prop.data.subtitle.substring(0, 100) + '...'}</span>
       </div>
       {/* <!-- page tite end --> */}

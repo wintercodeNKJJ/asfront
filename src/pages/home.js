@@ -98,12 +98,12 @@ const Home = () => {
             <div>
               {/* <!-- news text begin--> */}
               <div className="col-span-1 flex flex-col gap-8">
-                <div className="bg-green-200 p-5">
+                <div className="bg-[#347423] p-5 text-white">
                   <div>
                     <h1 className="font-serif font-bold text-3xl my-4">{TopContent[0].top.find(data => data.slug.current === "heighlights").title}
                     </h1>
                   </div>
-                  <div className="h-1 w-24 bg-green-600"></div>
+                  <div className="h-1 w-24 bg-[#4d4643]"></div>
                   <div className="my-4 flex flex-col gap-2">
                     <h3>
                       {TopContent[0].top.find(data => data.slug.current === "heighlights").body}
@@ -111,12 +111,12 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="bg-green-200 p-5">
+                <div className="bg-[#347423] p-5 text-white">
                   <div>
                     <h1 className="font-serif font-bold text-3xl my-4">contact-info
                     </h1>
                   </div>
-                  <div className="h-1 w-24 bg-green-600"></div>
+                  <div className="h-1 w-24 bg-[#4d4643]"></div>
                   <div className="my-4 flex flex-col gap-2">
                     <h3>
                       {ASlocation.body}<br />
