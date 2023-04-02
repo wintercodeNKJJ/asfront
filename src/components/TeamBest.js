@@ -37,7 +37,7 @@ const TeamBest = () => {
           }
 
           {/* <!-- items begin--> */}
-          <div class=" h-full flex flex-wrap gap-8 justify-around my-16 mx-4 md:mx-10 items-center lg:pl-0">
+          <div class=" h-full flex flex-wrap gap-4 justify-around my-16 mx-4 md:mx-10 items-center lg:pl-0">
             {/* <!-- coligue 1 --> */}
 
             {TeamMembers.map(item => (
