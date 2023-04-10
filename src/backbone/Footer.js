@@ -10,13 +10,15 @@
  */
 
 import ASL from "../assets/ASL.png";
+import { useStateContext } from "../context/StateContext";
 import DataAS from "../dbitems/dataAs";
 import { AiFillPhone, AiFillClockCircle, AiFillTwitterCircle, AiFillFacebook, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
 import { TiLocation } from 'react-icons/ti'
 
-const footer = () => {
+const Footer = () => {
 
-  const { Footer } = DataAS("footer")
+  const { lang } = useStateContext();
+  const { Footer } = DataAS("footer", lang)
   let show = true;
   let ASs;
   let AShours;
@@ -128,4 +130,4 @@ const footer = () => {
   );
 }
 
-export default footer;
+export default Footer;

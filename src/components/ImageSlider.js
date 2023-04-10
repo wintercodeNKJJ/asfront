@@ -2,12 +2,14 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Datastc from "../dbitems/dbit";
 import urlFor from "../utility/imageUrl";
 import { Carousel } from "flowbite-react";
+import { useStateContext } from "../context/StateContext";
 // import image1 from '../assets/Energy.jpeg'
 // import image2 from '../assets/Health.jpeg'
 
 const ImageSlider = () => {
 
-  const { Industries } = Datastc("industries");
+  const { lang } = useStateContext();
+  const { Industries } = Datastc("industries", lang);
   // const Industries = [
   //   {
   //     title: "this os a title",
@@ -27,7 +29,7 @@ const ImageSlider = () => {
       <div className="h-56 md:h-60 relative corner-squar">
         <Carousel>
           {Industries.map((item) => (
-            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" key={item._id}>
               {/* <!-- item1 of slider --> */}
               <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 

@@ -1,4 +1,5 @@
 // import { Router } from "react-router-dom/cjs/react-router-dom.min";
+import { useStateContext } from "../context/StateContext";
 import Datastc from "../dbitems/dbit";
 import { Dropdown } from "flowbite-react";
 
@@ -12,26 +13,27 @@ import { Dropdown } from "flowbite-react";
  */
 const Menu = (props) => {
 
+  const { lang } = useStateContext();
   let data = null;
 
   if (props.title) {
     if (props.title === "Industries") {
-      const { Industries } = Datastc("industries")
+      const { Industries } = Datastc("industries", lang)
       data = Industries;
 
     }
     if (props.title === "Servicies") {
-      const { Services } = Datastc("services")
+      const { Services } = Datastc("services", lang)
       data = Services;
 
     }
     if (props.title === "Products") {
-      const { Products } = Datastc("products")
+      const { Products } = Datastc("products", lang)
       data = Products;
 
     }
   } else {
-    const { Industries } = Datastc("industries")
+    const { Industries } = Datastc("industries", lang)
     data = Industries;
   }
 

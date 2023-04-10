@@ -11,8 +11,18 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'title_fr',
+      title: 'Titre',
+      type: 'string',
+    }),
+    defineField({
       name: 'subtitle',
       title: 'SubTitle',
+      type: 'string',
+    }),
+    defineField({
+      name: 'subtitle_fr',
+      title: 'Soustitre',
       type: 'string',
     }),
     defineField({
@@ -58,6 +68,11 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Body',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'body_fr',
+      title: 'Contenu',
       type: 'blockContent',
     }),
   ],

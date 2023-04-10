@@ -1,3 +1,4 @@
+import { useStateContext } from "../context/StateContext";
 import Datastc from "../dbitems/dbit";
 import urlFor from "../utility/imageUrl";
 
@@ -8,7 +9,8 @@ import urlFor from "../utility/imageUrl";
  */
 const TopNewsBlock = () => {
 
-  const { Industries } = Datastc("industries");
+  const { lang } = useStateContext();
+  const { Industries } = Datastc("industries", lang);
 
   let show = true;
   if (Industries.length <= 0) {

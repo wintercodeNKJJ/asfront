@@ -11,8 +11,18 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'title_fr',
+      title: 'Titre',
+      type: 'string',
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'description_fr',
+      title: 'Description Francaise',
       type: 'text',
     }),
   ],

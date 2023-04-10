@@ -2,15 +2,25 @@ import { useEffect } from "react";
 import { useState } from "react";
 import client from "../utility/client";
 
-const TeamMemers = (Target) => {
+const TeamMemers = (Target, lang) => {
 
   const [TeamMembers, setTeamMembers] = useState([]);
   const [Title, setTitle] = useState([])
 
   useEffect(() => {
 
-    let query = `*[_type == "team"]`
-    let query1 = `*[_type == "content" && slug.current == "talented-team-members"]`
+    let query;
+    let query1;
+
+    if (lang === 'en') {
+      query = `*[_type == "team"]`
+      query1 = `*[_type == "content" && slug.current == "talented-team-members"]`
+    } else {
+      query = `*[_type == "team"]`
+      query1 = `*[_type == "content" && slug.current == "talented-team-members"]`
+    }
+
+
 
     switch (Target) {
       case "team":
@@ -28,7 +38,7 @@ const TeamMemers = (Target) => {
         break;
     }
 
-  }, [Target]);
+  }, [Target, lang]);
   return { TeamMembers, Title };
 }
 

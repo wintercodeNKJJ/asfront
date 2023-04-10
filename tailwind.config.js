@@ -17,3 +17,4 @@ module.exports = {
 // require("daisyui"), 
     // require("flowbite/plugin"),
     // require("flowbite-react"),
+    // 7d8a4a1cebd3ded5e44ad818413d31725ad8f177

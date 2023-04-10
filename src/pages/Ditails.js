@@ -1,6 +1,7 @@
 import Datastc from "../dbitems/dbit";
 import PatnersLogo from "../components/PatnersLogo";
 import DitailsContent from "../components/ditailContent";
+import { useStateContext } from "../context/StateContext";
 
 /**
  * Item description component
@@ -15,12 +16,13 @@ const Ditails = (prop) => {
 
   const Title = prop.title;
   let data = null;
+  const { lang } = useStateContext()
 
 
 
-  const { Industries } = Datastc("industries");
-  const { Products } = Datastc("products");
-  const { Services } = Datastc("services");
+  const { Industries } = Datastc("industries", lang);
+  const { Products } = Datastc("products", lang);
+  const { Services } = Datastc("services", lang);
 
   // Searching for the correct item to display using switch block
 

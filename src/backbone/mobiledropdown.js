@@ -5,12 +5,14 @@
 import { useState } from "react";
 import Datastc from "../dbitems/dbit";
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { useStateContext } from "../context/StateContext";
 
 const MobileDropDown = () => {
+  const { lang } = useStateContext()
 
-  const { Industries } = Datastc("industries");
-  const { Services } = Datastc("services");
-  const { Products } = Datastc("products");
+  const { Industries } = Datastc("industries", lang);
+  const { Services } = Datastc("services", lang);
+  const { Products } = Datastc("products", lang);
   const [show, setShow] = useState(false)
   const [inShow, setInShow] = useState(false)
   const [serShow, setSerShow] = useState(false)

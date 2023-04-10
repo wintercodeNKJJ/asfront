@@ -4,6 +4,7 @@ import Datastc from "../dbitems/dbit";
 // import imageUrlBuilder from '@sanity/image-url'
 import urlFor from "../utility/imageUrl";
 import ASL from "../assets/ASL.png"
+import { useStateContext } from "../context/StateContext";
 
 /**
  * Should return items coresponding to the  required category
@@ -11,9 +12,10 @@ import ASL from "../assets/ASL.png"
  */
 const OptionsItems = ({ searchtitle }) => {
 
-  const { Industries } = Datastc("industries")
-  const { Services } = Datastc("services")
-  const { Products } = Datastc("products")
+  const { lang } = useStateContext();
+  const { Industries } = Datastc("industries", lang)
+  const { Services } = Datastc("services", lang)
+  const { Products } = Datastc("products", lang)
   let data = null;
   console.log('search title', searchtitle)
   switch (searchtitle) {
@@ -31,8 +33,6 @@ const OptionsItems = ({ searchtitle }) => {
       break;
   }
   console.log("data state", data)
-  // const { Industries } = Datastc("industries");
-  // data = Industries;
 
   return (
     <div>

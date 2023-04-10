@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import client from "../utility/client";
 
+
 /**
  * This component is used to fetch data from sanity.
  * @param {string} target data to be requested from sanity
@@ -11,7 +12,7 @@ import client from "../utility/client";
  * Datastc("products") to get products
  * @returns A set if data containing industries, services, or Products
  */
-const Datastc = (target) => {
+const Datastc = (target, lang) => {
 
   const [Industries, setIndustries] = useState([]);
   const [Services, setServices] = useState([]);
@@ -19,64 +20,112 @@ const Datastc = (target) => {
 
   useEffect(() => {
     // Fetch all post with thier author of each post (change to industries)
+    let query;
+    let query1;
+    let query2;
+
+    if (lang === 'en') {
+      query = `*[_type == "industries"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+
+      query1 = `*[_type == "services"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+
+      query2 = `*[_type == "product"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+    } else {
+      query = `*[_type == "industries"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+
+      query1 = `*[_type == "services"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+
+      query2 = `*[_type == "product"]{
+        title,
+        subtitle,
+        body[0]{
+          children[0]{
+            text
+          }
+        },
+        mainImage{
+          asset,
+        },
+        "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
+        } | order(publishedAt desc)`
+    }
+
     switch (target) {
       case "industries":
-        client.fetch(
-          `*[_type == "industries"]{
-          title,
-          subtitle,
-          body[0]{
-            children[0]{
-              text
-            }
-          },
-          mainImage{
-            asset,
-          },
-          "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
-      } | order(publishedAt desc)`
-        ).then(data => {
+        client.fetch(query).then(data => {
           setIndustries(data);
         })
         break;
       case "services":
         // Fetch all Services with thier respective authors
-        client.fetch(
-          `*[_type == "services"]{
-    title,
-    subtitle,
-    body[0]{
-      children[0]{
-        text
-      }
-    },
-    mainImage{
-      asset,
-    },
-    "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
-} | order(publishedAt desc)`
-        ).then(data => {
+        client.fetch(query1).then(data => {
           setServices(data);
         })
 
         break;
       case "products":
         // Fetch all products with thier respective authors
-        client.fetch(
-          `*[_type == "product"]{
-    title,
-    subtitle,
-    body[0]{
-      children[0]{
-        text
-      }
-    },
-    mainImage{
-      asset,
-    },
-    "name": *[_type == "author" && author._ref == author._id]{name,bio[0]{children[0]{text}}}
-} | order(publishedAt desc)`
-        ).then(data => {
+        client.fetch(query2).then(data => {
           setProducts(data);
         })
         break;
@@ -84,7 +133,7 @@ const Datastc = (target) => {
       default:
         break;
     }
-  }, [target])
+  }, [target, lang])
 
   return { Industries, Services, Products }
 }

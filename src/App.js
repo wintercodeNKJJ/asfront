@@ -11,74 +11,77 @@ import Datastc from "./dbitems/dbit";
 import NewsDitails from "./pages/NewsDitails";
 import Ndatastc from "./dbitems/dbnews";
 import ContactUs from "./pages/ContactUs";
+import { StateContext } from "./context/StateContext";
 
 function App() {
 
-  const { Industries } = Datastc("industries")
-  const { Services } = Datastc("services")
-  const { Products } = Datastc("products")
-  const { Cnews } = Ndatastc('cnews');
+  const { Industries } = Datastc("industries", 'en')
+  const { Services } = Datastc("services", 'en')
+  const { Products } = Datastc("products", 'en')
+  const { Cnews } = Ndatastc('cnews', 'en')
   return (
     <div className="App font-serif">
       <Router>
-        <Header />
-        <div className="Content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-
-            <Route path="/Contact">
-              <ContactUs />
-            </Route>
-
-            <Route path="/News">
-              <NewsLatest />
-            </Route>
-
-            <Route path="/Industries">
-              <Category title="Industries" />
-            </Route>
-
-            <Route path="/Servicies">
-              <Category title="Servicies" />
-            </Route>
-
-            <Route path="/Products">
-              <Category title="Products" />
-            </Route>
-
-            <Route path="/Research_&_Development">
-              <Category title="Research_&_Development" />
-            </Route>
-
-            {Industries.map((link) => (
-              <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title="Industries" search={link.title.replace(" ", "_")} />
+        <StateContext>
+          <Header />
+          <div className="Content">
+            <Switch>
+              <Route exact path="/">
+                <Home />
               </Route>
-            ))}
 
-            {Services.map((link) => (
-              <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title="Services" search={link.title.replace(" ", "_")} />
+              <Route path="/Contact">
+                <ContactUs />
               </Route>
-            ))}
 
-            {Products.map((link) => (
-              <Route path={"/" + link.title.replace(" ", "_")}>
-                <Ditails title="Products" search={link.title.replace(" ", "_")} />
+              <Route path="/News">
+                <NewsLatest />
               </Route>
-            ))}
 
-            {Cnews.map((link) => (
-              <Route path={"/" + link._id}>
-                <NewsDitails item={link} />
+              <Route path="/Industries">
+                <Category title="Industries" />
               </Route>
-            ))}
 
-          </Switch>
-        </div>
-        <Footer />
+              <Route path="/Servicies">
+                <Category title="Servicies" />
+              </Route>
+
+              <Route path="/Products">
+                <Category title="Products" />
+              </Route>
+
+              <Route path="/Research_&_Development">
+                <Category title="Research_&_Development" />
+              </Route>
+
+              {Industries.map((link) => (
+                <Route path={"/" + link.title.replace(" ", "_")}>
+                  <Ditails title="Industries" search={link.title.replace(" ", "_")} />
+                </Route>
+              ))}
+
+              {Services.map((link) => (
+                <Route path={"/" + link.title.replace(" ", "_")}>
+                  <Ditails title="Services" search={link.title.replace(" ", "_")} />
+                </Route>
+              ))}
+
+              {Products.map((link) => (
+                <Route path={"/" + link.title.replace(" ", "_")}>
+                  <Ditails title="Products" search={link.title.replace(" ", "_")} />
+                </Route>
+              ))}
+
+              {Cnews.map((link) => (
+                <Route path={"/" + link._id}>
+                  <NewsDitails item={link} />
+                </Route>
+              ))}
+
+            </Switch>
+          </div>
+          <Footer />
+        </StateContext>
       </Router>
     </div>
   );

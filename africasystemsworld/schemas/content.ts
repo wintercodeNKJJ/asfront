@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'title_fr',
+      title: 'Titre',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -22,6 +27,11 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Body',
+      type: 'text',
+    }),
+    defineField({
+      name: 'body_fr',
+      title: 'Contenu',
       type: 'text',
     }),
     defineField({

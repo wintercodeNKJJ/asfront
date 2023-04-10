@@ -7,6 +7,7 @@ import HomeCont from "../dbitems/homeContent";
 import Techno from "../assets/techno.jpeg";
 import Automobile from "../assets/Automobile.png";
 import DataAS from "../dbitems/dataAs";
+import { useStateContext } from "../context/StateContext";
 
 
 
@@ -16,8 +17,11 @@ import DataAS from "../dbitems/dataAs";
  * @returns the home page of AS
  */
 const Home = () => {
-  const { TopContent } = HomeCont("top");
-  const { Footer } = DataAS("footer")
+  const { lang } = useStateContext();
+
+  const { TopContent } = HomeCont("top", lang);
+  const { Footer } = DataAS("footer", lang)
+
 
   let ASnumber;
   let ASlocation;
