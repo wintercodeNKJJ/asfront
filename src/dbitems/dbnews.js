@@ -100,9 +100,9 @@ const Ndatastc = (newsdata, lang) => {
                   _id,
                   _createdAt,
                   mainImage,
-                  subtitle,
-                    title,
-                    body[0]{
+                  "subtitle":subtitle_fr,
+                    "title":title_fr,
+                    "body":body_fr[0]{
                       children[0]{
                         text
                       }
@@ -116,9 +116,9 @@ const Ndatastc = (newsdata, lang) => {
                 _id,
                 _createdAt,
                 mainImage,
-                subtitle,
-                  title,
-                  body[0]{
+                "subtitle":subtitle_fr,
+                    "title":title_fr,
+                    "body":body_fr[0]{
                     children[0]{
                       text
                     }
@@ -132,9 +132,9 @@ const Ndatastc = (newsdata, lang) => {
                 _id,
                 _createdAt,
                 mainImage,
-                subtitle,
-                  title,
-                  body[0]{
+                "subtitle":subtitle_fr,
+                    "title":title_fr,
+                    "body":body_fr[0]{
                     children[0]{
                       text
                     }

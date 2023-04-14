@@ -105,10 +105,10 @@ const Footer = () => {
                 <div class="p-1">
                   <div class="text-lg font-bold mb-2">Follow us</div>
                   <div class="flex gap-2">
-                    <div class="rounded-full border p-3"><AiFillTwitterCircle size={25} /></div>
-                    <div class="rounded-full border p-3"><AiFillFacebook size={25} /></div>
+                    <a href="https://www.facebook.com/LewooSarl/"> <div class="rounded-full border p-3"><AiFillTwitterCircle size={25} /></div> </a>
+                    <a href="https://www.facebook.com/LewooSarl/"><div class="rounded-full border p-3"><AiFillFacebook size={25} /></div></a>
                     <div class="rounded-full border p-3"><AiFillLinkedin size={25} /></div>
-                    <div class="rounded-full border p-3"><AiFillInstagram size={25} /></div>
+                    <a href="https://www.instagram.com/africasystems/"><div class="rounded-full border p-3"><AiFillInstagram size={25} /></div></a>
                   </div>
                 </div>
               </div>

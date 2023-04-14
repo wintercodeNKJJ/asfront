@@ -17,7 +17,12 @@ const TeamMemers = (Target, lang) => {
       query1 = `*[_type == "content" && slug.current == "talented-team-members"]`
     } else {
       query = `*[_type == "team"]`
-      query1 = `*[_type == "content" && slug.current == "talented-team-members"]`
+      query1 = `*[_type == "content" && slug.current == "talented-team-members"]{
+        "body": body_fr,
+        mainImage,
+        slug,
+        "title":title_fr,
+      }`
     }
 
 

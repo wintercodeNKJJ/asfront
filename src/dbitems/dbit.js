@@ -68,9 +68,9 @@ const Datastc = (target, lang) => {
         } | order(publishedAt desc)`
     } else {
       query = `*[_type == "industries"]{
-        title,
-        subtitle,
-        body[0]{
+        "title":title_fr,
+        "subtitle":subtitle_fr,
+        "body":body_fr[0]{
           children[0]{
             text
           }
@@ -82,9 +82,9 @@ const Datastc = (target, lang) => {
         } | order(publishedAt desc)`
 
       query1 = `*[_type == "services"]{
-        title,
-        subtitle,
-        body[0]{
+        "title":title_fr,
+        "subtitle":subtitle_fr,
+        "body":body_fr[0]{
           children[0]{
             text
           }
@@ -96,9 +96,9 @@ const Datastc = (target, lang) => {
         } | order(publishedAt desc)`
 
       query2 = `*[_type == "product"]{
-        title,
-        subtitle,
-        body[0]{
+        "title":title_fr,
+        "subtitle":subtitle_fr,
+        "body":body_fr[0]{
           children[0]{
             text
           }

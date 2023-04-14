@@ -26,9 +26,19 @@ const DataAS = (Target, lang) => {
       query2 = `*[_type == "content" && slug.current in ["africa-systems","open-hours","location","number","email"]]`
     }
     else {
-      query = `*[_type == "content_fr" && slug.current in ["our-vission","our-mission","who-we-are"] ] | order(publishedAt desc)`
-      query1 = `*[_type == "content_fr" && slug.current == "power-of-evolution"] | order(publishedAt desc)`
-      query2 = `*[_type == "content_fr" && slug.current in ["africa-systems","open-hours","location","number","email"]]`
+      query = `*[_type == "content" && slug.current in ["our-vission","our-mission","who-we-are"] ]{
+        "body": body_fr,
+        mainImage,
+        slug,
+        "title":title_fr,
+      } | order(publishedAt desc)`
+      query1 = `*[_type == "content" && slug.current == "power-of-evolution"]{
+        "body": body_fr,
+        mainImage,
+        slug,
+        "title":title_fr,
+      } | order(publishedAt desc)`
+      query2 = `*[_type == "content" && slug.current in ["africa-systems","open-hours","location","number","email"]]`
     }
     switch (Target) {
       case "vission":
