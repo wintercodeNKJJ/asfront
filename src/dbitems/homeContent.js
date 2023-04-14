@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import client from "../utility/client";
 
-const HomeCont = (Target,lang) => {
+const HomeCont = (Target, lang) => {
   const [TopContent, setTopContent] = useState([]);
   const [MiddleContent, setMiddleContent] = useState([]);
   const [ButtomContent, setButtomContent] = useState([]);
@@ -17,14 +17,14 @@ const HomeCont = (Target,lang) => {
       query1 = `*[_type == "home"]{
         "top":*[_type=="content" && _id in ^.topContent[]._ref],
     } | order(publishedAt desc)`
-  
+
       query2 = `*[_type == "home"]{
       "middle":*[_type=="content" && _id in ^.middleContent[]._ref],
     } | order(publishedAt desc)`
-  
+
       query3 = `*[_type == "home"]{
       "buttom":*[_type=="content" && _id in ^.buttomContent[]._ref],
-    } | order(publishedAt desc)`  
+    } | order(publishedAt desc)`
     } else {
       query1 = `*[_type == "home"]{
         "top":*[_type=="content" && _id in ^.topContent[]._ref]{
@@ -34,7 +34,7 @@ const HomeCont = (Target,lang) => {
           slug,
         },
     } | order(publishedAt desc)`
-  
+
       query2 = `*[_type == "home"]{
       "middle":*[_type=="content" && _id in ^.middleContent[]._ref]{
         "body":body_fr,
@@ -43,7 +43,7 @@ const HomeCont = (Target,lang) => {
         slug,
       },
     } | order(publishedAt desc)`
-  
+
       query3 = `*[_type == "home"]{
       "buttom":*[_type=="content" && _id in ^.buttomContent[]._ref]{
         "body":body_fr,
@@ -53,7 +53,7 @@ const HomeCont = (Target,lang) => {
       },
     } | order(publishedAt desc)`
     }
-    
+
 
     switch (Target) {
       case "top":
@@ -75,7 +75,7 @@ const HomeCont = (Target,lang) => {
       default:
         break;
     }
-  }, [Target,lang])
+  }, [Target, lang])
 
   return { TopContent, MiddleContent, ButtomContent };
 }
