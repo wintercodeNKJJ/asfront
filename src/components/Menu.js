@@ -54,7 +54,7 @@ const Menu = (props) => {
         <div className="shadow-lg md:p-7 lg:p-14 text-sm bg-[#347423] grid md:grid-cols-3 lg:grid-cols-5 gap-8 w-full h-full -my-2">
           {data.map((Itm, i) => (
             <div className="w-20 md:w-28 lg:w-40 relative hover:bg-gray-300 duration-500 p-2 rounded-lg hover:text-black text-white" key={i}>
-              <a href={"/" + Itm.title.replace(" ", "_")}>
+              <a href={"/" + Itm.slug.current.replace(" ", "_")}>
                 <h1 className="font-bold text-xl">{Itm.title.replace("_", " ")}</h1>
                 <div className="bg-green-800 h-0.5 w-24 my-2"></div>
                 <p>{Itm.subtitle}</p>

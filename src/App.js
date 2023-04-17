@@ -55,20 +55,20 @@ function App() {
               </Route>
 
               {Industries.map((link, i) => (
-                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
-                  <Ditails title="Industries" search={link.title.replace(" ", "_")} />
+                <Route path={"/" + link.slug.current.replace(" ", "_")} key={i}>
+                  <Ditails title="Industries" search={link.slug.current.replace(" ", "_")} />
                 </Route>
               ))}
 
               {Services.map((link, i) => (
-                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
-                  <Ditails title="Services" search={link.title.replace(" ", "_")} />
+                <Route path={"/" + link.slug.current.replace(" ", "_")} key={i}>
+                  <Ditails title="Services" search={link.slug.current.replace(" ", "_")} />
                 </Route>
               ))}
 
               {Products.map((link, i) => (
-                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
-                  <Ditails title="Products" search={link.title.replace(" ", "_")} />
+                <Route path={"/" + link.slug.current.replace(" ", "_")} key={i}>
+                  <Ditails title="Products" search={link.slug.current.replace(" ", "_")} />
                 </Route>
               ))}
 

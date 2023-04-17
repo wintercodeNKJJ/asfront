@@ -28,14 +28,14 @@ const Ditails = (prop) => {
 
   switch (Title) {
     case "Industries":
-      data = Industries.find(item => item.title === prop.search);
+      data = Industries.find(item => item.slug.current === prop.search);
 
       break;
     case "Services":
-      data = Services.find(item => item.title === prop.search);
+      data = Services.find(item => item.slug.current === prop.search);
       break;
     default:
-      data = Products.find(item => item.title === prop.search);
+      data = Products.find(item => item.slug.current === prop.search);
       break;
   }
 

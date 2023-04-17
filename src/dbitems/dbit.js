@@ -28,6 +28,7 @@ const Datastc = (target, lang) => {
       query = `*[_type == "industries"]{
         title,
         subtitle,
+        slug,
         body[0]{
           children[0]{
             text
@@ -42,6 +43,7 @@ const Datastc = (target, lang) => {
       query1 = `*[_type == "services"]{
         title,
         subtitle,
+        slug,
         body[0]{
           children[0]{
             text
@@ -56,6 +58,7 @@ const Datastc = (target, lang) => {
       query2 = `*[_type == "product"]{
         title,
         subtitle,
+        slug,
         body[0]{
           children[0]{
             text
@@ -70,6 +73,7 @@ const Datastc = (target, lang) => {
       query = `*[_type == "industries"]{
         "title":title_fr,
         "subtitle":subtitle_fr,
+        slug,
         "body":body_fr[0]{
           children[0]{
             text
@@ -84,6 +88,7 @@ const Datastc = (target, lang) => {
       query1 = `*[_type == "services"]{
         "title":title_fr,
         "subtitle":subtitle_fr,
+        slug,
         "body":body_fr[0]{
           children[0]{
             text
@@ -98,6 +103,7 @@ const Datastc = (target, lang) => {
       query2 = `*[_type == "product"]{
         "title":title_fr,
         "subtitle":subtitle_fr,
+        slug,
         "body":body_fr[0]{
           children[0]{
             text
