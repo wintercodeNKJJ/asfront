@@ -40,9 +40,9 @@ const TeamBest = () => {
           <div class=" h-full flex flex-wrap gap-4 justify-around my-16 mx-4 md:mx-10 items-center lg:pl-0">
             {/* <!-- coligue 1 --> */}
 
-            {TeamMembers.map(item => (
+            {TeamMembers.map((item, i) => (
 
-              <div
+              <div key={i}
                 class="flex mx-auto text-white hover:text-black hover:bg-gradient-to-br hover:from-white hover:to-[#347423] duration-500 flex-col justify-end items-center p-4 rounded-md bg-gradient-to-br from-[#4d4643] to-[#347423] shadow-lg w-72">
 
                 <div class="">

@@ -40,8 +40,8 @@ const MobileDropDown = () => {
             <li className="border-b-4 border-transparent"><div
               className="w-full border-b-2  flex justify-between"><a href="/Industries">Industries</a> {inShow ? <AiOutlineMinus onClick={() => setInShow(!inShow)} /> : <AiOutlinePlus onClick={() => setInShow(!inShow)} />}</div>
               <ul className={inShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
-                {Industries.map((data) => (
-                  <li className="flex justify-center"><a href={"/" + data.title}>{data.title}</a></li>
+                {Industries.map((data, i) => (
+                  <li className="flex justify-center" key={i}><a href={"/" + data.title}>{data.title}</a></li>
                 ))}
               </ul>
             </li>
@@ -50,8 +50,8 @@ const MobileDropDown = () => {
             <li className="border-b-4 border-transparent"><div
               className="w-full border-b-2  flex justify-between"><a href="/Services">Services</a> {serShow ? <AiOutlineMinus onClick={() => setSerShow(!serShow)} /> : <AiOutlinePlus onClick={() => setSerShow(!serShow)} />}</div>
               <ul className={serShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
-                {Services.map((data) => (
-                  <li className="flex justify-center"><a href={"/" + data.title}>{data.title}</a></li>
+                {Services.map((data, i) => (
+                  <li className="flex justify-center" key={i}><a href={"/" + data.title}>{data.title}</a></li>
                 ))}
               </ul>
             </li>
@@ -60,8 +60,8 @@ const MobileDropDown = () => {
             <li className="border-b-4 border-transparent"><div
               className="w-full border-b-2  flex justify-between"><a href="/Products">Products</a> {prodShow ? <AiOutlineMinus onClick={() => setProdShow(!prodShow)} /> : <AiOutlinePlus onClick={() => setProdShow(!prodShow)} />}</div>
               <ul className={prodShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
-                {Products.map((data) => (
-                  <li className="flex justify-center"><a href={"/" + data.title.replace("_", " ")}>{data.title.replace("_", " ")}</a></li>
+                {Products.map((data, i) => (
+                  <li className="flex justify-center" key={i}><a href={"/" + data.title.replace("_", " ")}>{data.title.replace("_", " ")}</a></li>
                 ))}
               </ul>
             </li>

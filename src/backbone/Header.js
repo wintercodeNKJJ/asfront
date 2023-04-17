@@ -1,11 +1,11 @@
 import Menu from "../components/Menu";
 import ASL from "../assets/ASL.png"
 import MobileDropDown from "./mobiledropdown";
-import {useStateContext} from "../context/StateContext"
+import { useStateContext } from "../context/StateContext"
 // import { AiOutlineSearch } from 'react-icons/ai'
 
 const Header = () => {
-  const {setLang,lang} = useStateContext();
+  const { setLang, lang } = useStateContext();
   return (
     <div>
 
@@ -20,9 +20,9 @@ const Header = () => {
               href="/News">Latest news</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="/Contact">Contact us</a></li>
-            <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><select className="p-2 bg-transparent">
-              <option value="en" selected onClick={(e) => {setLang(e.target.value); console.log(lang)}}>English</option>
-              <option value="fr" onClick={(e) => {setLang(e.target.value); console.log(lang)}}>French</option>
+            <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><select className="p-2 bg-transparent" defaultValue="en" onChange={(e) => { setLang(e.target.value) }}>
+              <option value="en" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>English</option>
+              <option value="fr" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>French</option>
             </select>
             </li>
           </ul>

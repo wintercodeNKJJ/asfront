@@ -33,8 +33,8 @@ const WhoWeAre = () => {
 
           {/* <!-- who we are --> */}
 
-          {showAsD && AsData.map(data => (
-            <div className="lg:flex md:mb-4">
+          {showAsD && AsData.map((data, i) => (
+            <div className="lg:flex md:mb-4" key={i}>
               <div className=" bg-gradient-to-r from-[#4d4643] to-[#347423] lg:w-1/2 h-36 flex justify-center items-center">
                 <img src={ASL} alt="" className="h-32" />
               </div>

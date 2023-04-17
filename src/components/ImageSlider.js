@@ -28,8 +28,8 @@ const ImageSlider = () => {
 
       <div className="h-56 md:h-60 relative corner-squar">
         <Carousel>
-          {Industries.map((item) => (
-            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" key={item._id}>
+          {Industries.map((item, i) => (
+            <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" key={i}>
               {/* <!-- item1 of slider --> */}
               <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full dark:text-gray-800">
 

@@ -54,26 +54,26 @@ function App() {
                 <Category title="Research_&_Development" />
               </Route>
 
-              {Industries.map((link) => (
-                <Route path={"/" + link.title.replace(" ", "_")}>
+              {Industries.map((link, i) => (
+                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
                   <Ditails title="Industries" search={link.title.replace(" ", "_")} />
                 </Route>
               ))}
 
-              {Services.map((link) => (
-                <Route path={"/" + link.title.replace(" ", "_")}>
+              {Services.map((link, i) => (
+                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
                   <Ditails title="Services" search={link.title.replace(" ", "_")} />
                 </Route>
               ))}
 
-              {Products.map((link) => (
-                <Route path={"/" + link.title.replace(" ", "_")}>
+              {Products.map((link, i) => (
+                <Route path={"/" + link.title.replace(" ", "_")} key={i}>
                   <Ditails title="Products" search={link.title.replace(" ", "_")} />
                 </Route>
               ))}
 
-              {Cnews.map((link) => (
-                <Route path={"/" + link._id}>
+              {Cnews.map((link, i) => (
+                <Route path={"/" + link._id} key={i}>
                   <NewsDitails item={link} />
                 </Route>
               ))}
