@@ -20,7 +20,7 @@ const Header = () => {
               href="/News">Latest news</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
               href="/Contact">Contact us</a></li>
-            <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><select className="p-2 bg-transparent" defaultValue="en" onChange={(e) => { setLang(e.target.value) }}>
+            <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><select className="p-2 bg-transparent" defaultValue={lang} onChange={(e) => { setLang(e.target.value) }}>
               <option value="en" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>English</option>
               <option value="fr" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>French</option>
             </select>
