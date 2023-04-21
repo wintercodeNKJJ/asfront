@@ -34,7 +34,7 @@ const TopNewsBlock = () => {
 
               {/* <!-- news text begin--> */}
               <div className="mt-4">
-                <h1 className="font-bold font-serif text-xl">{Industries[0].title}|{Industries[1].title}|{Industries[2].title}</h1>
+                <h1 className="font-bold text-xl">{Industries[0].title}|{Industries[1].title}|{Industries[2].title}</h1>
                 <div className="mt-2 font-light text-justify">
                   <p>{Industries[0].body.children.text}</p>
                 </div>
@@ -50,9 +50,9 @@ const TopNewsBlock = () => {
 
               {/* <!-- news text begin--> */}
               <div className="mt-4">
-                <h1 className="font-bold font-serif text-xl">{Industries[3].title}</h1>
+                <h1 className="font-bold text-xl">{Industries[2].title}</h1>
                 <div className="mt-2 font-light text-justify">
-                  <p>{Industries[3].body.children.text}</p>
+                  <p>{Industries[2].body.children.text.substring(0,400)}...</p>
                 </div>
               </div>
               {/* <!-- news text end--> */}

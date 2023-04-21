@@ -40,7 +40,7 @@ const OptionsItems = ({ searchtitle }) => {
       <div className="bg-gray-300 lg:px-40 pb-14">
 
         <div className="flex justify-start mx-10">
-          <span className="font-bold text-3xl mt-5 mb-3 font-serif"> {searchtitle} </span>
+          <span className="font-bold text-3xl mt-5 mb-3"> {searchtitle} </span>
         </div>
 
         <div className="h-1 bg-gray-400 rounded-box mb-5 mx-10 lg:mx-0"></div>
@@ -56,7 +56,7 @@ const OptionsItems = ({ searchtitle }) => {
                 </a>
 
                 <div className="text-black">
-                  <h1 className="font-bold font-serif text-3xl">AS</h1>
+                  <h1 className="font-bold text-3xl">AS</h1>
                   <h2 className="text-xl">{item.title}</h2>
                   <div className="h-1 my-3 bg-green-700 w-14"></div>
                   <div className="font-light">

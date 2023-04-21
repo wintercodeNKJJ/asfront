@@ -40,7 +40,7 @@ const WhoWeAre = () => {
               </div>
 
               <div className="px-2 lg:w-1/2 mt-4 lg:mt-0">
-                <h1 className="text-xl font-bold font-serif">{data.title}</h1>
+                <h1 className="text-xl font-bold">{data.title}</h1>
 
                 <div className=" text-justify">
                   <p>{data.body}</p>
@@ -54,7 +54,7 @@ const WhoWeAre = () => {
         {showInov &&
           <div className="bg-[url('/src/assets/power.png')] bg-cover">
             <div className="p-4 text-white w-full md:w-64">
-              <h1 className="text-2xl font-serif">{Inovation[0].title}</h1>
+              <h1 className="text-2xl">{Inovation[0].title}</h1>
               <div className="font-light text-justify">
                 <p>{Inovation[0].body}</p>
               </div>

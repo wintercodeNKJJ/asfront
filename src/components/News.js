@@ -9,7 +9,7 @@ const News = () => {
       {/* <!-- Title begin --> */}
       <div className="lg:mx-44 mx-10 my-8">
         <div className="w-3/6">
-          <h1 className="font-bold text-3xl font-serif">Latest news</h1>
+          <h1 className="font-bold text-3xl">Latest news</h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus porro, deleniti
           </p>
         </div>
@@ -22,7 +22,7 @@ const News = () => {
         {/* <!-- news block 1 --> */}
         <div className="">
 
-          <div className="text-3xl font-serif font-bold my-4">
+          <div className="text-3xl font-bold my-4">
             <h1>News1 Title</h1>
           </div>
 
@@ -48,7 +48,7 @@ const News = () => {
         {/* <!-- news block 2 --> */}
         <div className="">
 
-          <div className="text-3xl font-serif font-bold my-4">
+          <div className="text-3xl font-bold my-4">
             <h1>News2 Title</h1>
           </div>
 

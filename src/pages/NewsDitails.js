@@ -5,13 +5,13 @@ const NewsDitails = (props) => {
   return (
     <div>
       <div className="h-full p-4 flex justify-center">
-        <div className="mx-auto w-full md:max-w-[40rem]">
+        <div className="mx-auto w-full md:max-w-[60rem]">
 
-          <div className="text-3xl font-serif font-bold my-4">
+          <div className="text-3xl font-bold my-4">
             <h1>{props.item.title}</h1>
           </div>
           <div>
-            <img src={urlFor(props.item.mainImage)} alt={props.item.title} className="h-24 w-full object-cover" />
+            <img src={urlFor(props.item.mainImage)} alt={props.item.title} className="h-full w-full object-cover" />
           </div>
           <div className="flex justify-end text-sm">
             <p>{props.item._createdAt}</p>

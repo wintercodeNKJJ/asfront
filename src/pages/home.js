@@ -48,13 +48,13 @@ const Home = () => {
               <div className="mx-4">
                 {/* <!-- expirience --> */}
                 <div className="flex items-center gap-4 text-green-700">
-                  <h1 className="text-7xl font-serif">{TopContent[0].top.find(data => data.title === "+15").title}</h1>
-                  <h2 className="text-3xl font-bold font-serif">{TopContent[0].top.find(data => data.title === "+15").body}</h2>
+                  <h1 className="text-7xl ">{TopContent[0].top.find(data => data.title === "+15").title}</h1>
+                  <h2 className="text-3xl font-bold ">{TopContent[0].top.find(data => data.title === "+15").body}</h2>
                 </div>
 
                 {/* <!-- text --> */}
                 <div>
-                  <h2 className="text-2xl font-bold font-serif">{TopContent[0].top.find(data => data.slug.current === "the-main-mission").title}</h2>
+                  <h2 className="text-2xl font-bold ">{TopContent[0].top.find(data => data.slug.current === "the-main-mission").title}</h2>
                   <p>
                     {TopContent[0].top.find(data => data.slug.current === "the-main-mission").body}
                   </p>
@@ -87,7 +87,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className="font-serif font-bold text-2xl">We build up the future</h1>
+                  <h1 className=" font-bold text-2xl">We build up the future</h1>
                   <div>
                     <p>
                       Power of Innovation, Imagination is more important than knowledge. For knowledge is limited, whereas
@@ -104,7 +104,7 @@ const Home = () => {
               <div className="col-span-1 flex flex-col gap-8">
                 <div className="bg-[#347423] p-5 text-white">
                   <div>
-                    <h1 className="font-serif font-bold text-3xl my-4">{TopContent[0].top.find(data => data.slug.current === "heighlights").title}
+                    <h1 className=" font-bold text-3xl my-4">{TopContent[0].top.find(data => data.slug.current === "heighlights").title}
                     </h1>
                   </div>
                   <div className="h-1 w-24 bg-[#4d4643]"></div>
@@ -117,7 +117,7 @@ const Home = () => {
 
                 <div className="bg-[#347423] p-5 text-white">
                   <div>
-                    <h1 className="font-serif font-bold text-3xl my-4">contact-info
+                    <h1 className=" font-bold text-3xl my-4">contact-info
                     </h1>
                   </div>
                   <div className="h-1 w-24 bg-[#4d4643]"></div>

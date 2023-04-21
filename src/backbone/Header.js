@@ -15,11 +15,11 @@ const Header = () => {
         <div className="col-span-3 min-w-max">
           <ul className="flex text-sm font-extralight text-white h-full justify-center items-center">
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
-              href="/">E Commerce</a></li>
+              href="/">{lang==='en'?'E Commerce':'Commerce electronique'}</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
-              href="/News">Latest news</a></li>
+              href="/News">{lang==='en'?'Latest news':'Derniere Nouvele'}</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><a className="bordered border-r-2 px-2"
-              href="/Contact">Contact us</a></li>
+              href="/Contact">{lang==='en'?'Contact us':'contacter nous'}</a></li>
             <li className="h-full flex items-center hover:bg-white hover:text-black duration-500"><select className="p-2 bg-transparent" defaultValue={lang} onChange={(e) => { setLang(e.target.value) }}>
               <option value="en" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>English</option>
               <option value="fr" onClick={(e) => { setLang(e.target.value); console.log(lang) }}>French</option>
@@ -44,15 +44,14 @@ const Header = () => {
         </div>
 
         <div className="col-span-3 ">
-          <ul className="flex items-end h-full pb-6 gap-12 font-serif">
-            <li className=" animunder after:w-0"><a href="/">Home</a></li>
+          <ul className="flex items-end h-full pb-6 gap-12">
+            <li className=" animunder after:w-0"><a href="/">{lang==='en'?'Home':'Aceuile'}</a></li>
 
-            <Menu title="Industries" />
-            <Menu title="Servicies" />
-            <Menu title="Products" />
+            <Menu title="Industries" titre="Industries" />
+            <Menu title="Servicies" titre="Services"/>
+            <Menu title="Products" titre="Produit"/>
 
-            <li className="animunder after:w-0"><a href="Research_&_Development">Research &
-              Development</a></li>
+            <li className="animunder after:w-0"><a href="Research_&_Development">{lang==='en'?'Research & Development':'Recherche et Developement'}</a></li>
           </ul>
         </div>
       </div>

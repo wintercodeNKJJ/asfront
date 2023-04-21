@@ -45,7 +45,7 @@ const Menu = (props) => {
       <Dropdown
         trigger="hover"
         class=" slotion border-b-4 border-b-[#347423] bg-[#347423] animunder after:w-0"
-        label={props.title}
+        label={lang==='en'?props.title:props.titre}
         arrowIcon={false}
         size="lg"
         href={`/${props.title}`}
@@ -57,7 +57,7 @@ const Menu = (props) => {
               <a href={"/" + Itm.slug.current.replace(" ", "_")}>
                 <h1 className="font-bold text-xl">{Itm.title.replace("_", " ")}</h1>
                 <div className="bg-green-800 h-0.5 w-24 my-2"></div>
-                <p>{Itm.subtitle}</p>
+                <p>{Itm.subtitle.substring(0,100)}...</p>
               </a>
             </div>
           ))}

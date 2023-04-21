@@ -2,6 +2,7 @@ import Ndatastc from "../dbitems/dbnews";
 import urlFor from "../utility/imageUrl";
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useStateContext } from "../context/StateContext"
+import { Link, animateScroll as scroll } from "react-scroll";
 
 /**
  * this page contains the news of AS activites
@@ -28,6 +29,7 @@ const NewsLatest = () => {
   if (Events.length === 0) { Eve = null }
   if (Inovation.length === 0) { Inovat = null }
 
+
   return (
     <div>
       {!data && <div className="h-screen px-4 md:px-40 font-light flex justify-center items-center"> Loding...</div>}
@@ -37,9 +39,9 @@ const NewsLatest = () => {
           {/* <!-- Title begin --> */}
           <div className="lg:mx-44 mx-10 my-2">
             <div className="w-3/6 flex gap-2">
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><a href="#News">news ({News.length})</a></div>
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><a href="#Events">events ({Events.length})</a></div>
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><a href="#Inovation">inovation ({Inovation.length})</a></div>
+              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="News" spy={true} smooth={true} offset={-70} duration={500}/>news</div>
+              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="Events" spy={true} smooth={true} duration={500}/>events</div>
+              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="Inovation" spy={true} smooth={true} offset={-70} duration={500}/>inovation</div>
             </div>
           </div>
           {/* <!-- Title end --> */}
@@ -66,7 +68,7 @@ const NewsLatest = () => {
                 </div>
 
                 <div className="p-2">
-                  <div className="text-3xl font-serif font-bold my-1">
+                  <div className="text-3xl font-bold my-1">
                     <h1 className="">{news.title}</h1>
                   </div>
 
@@ -102,7 +104,7 @@ const NewsLatest = () => {
                 </div>
 
                 <div className="p-2">
-                  <div className="text-3xl font-serif font-bold my-1">
+                  <div className="text-3xl font-bold my-1">
                     <h1 className="">{news.title}</h1>
                   </div>
 
@@ -139,7 +141,7 @@ const NewsLatest = () => {
                 </div>
 
                 <div className="p-2">
-                  <div className="text-3xl font-serif font-bold my-1">
+                  <div className="text-3xl font-bold my-1">
                     <h1 className="">{news.title}</h1>
                   </div>
 

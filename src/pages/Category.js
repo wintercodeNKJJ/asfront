@@ -13,7 +13,7 @@ const Category = (prop) => {
     <div>
       {/* <!-- page tite begin --> */}
       <div className=" lg:px-40 px-10 flex justify-start">
-        <h1 className="text-5xl font-serif font-extrabold my-3">{Title}</h1>
+        <h1 className="text-5xl font-extrabold my-3">{Title}</h1>
       </div>
       {/* <!-- page tite end --> */}
       {/* <ImageSlider /> */}
@@ -28,7 +28,7 @@ const Category = (prop) => {
 
           {/* <!-- news text begin--> */}
           <div className="mt-4">
-            <h1 className="font-bold font-serif text-xl">Vehicle Tracking</h1>
+            <h1 className="font-bold text-xl">Vehicle Tracking</h1>
             <div className="mt-2 font-light">
               <p>A simple solution developed by Africa systems to help you locate and monitor
                 your vehicles across the land with just a click.</p>
@@ -41,7 +41,7 @@ const Category = (prop) => {
         <div>
           {/* <!-- news text top begin --> */}
           <div className="mt-4 border-l-[30px] border-green-600 pl-2">
-            <h1 className="font-bold font-serif text-3xl">First side Mesage</h1>
+            <h1 className="font-bold text-3xl">First side Mesage</h1>
             <div className="mt-2 font-light">
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sapiente quae eligendi fuga corrupti
                 ratione aperiam laudantium minima voluptatibus, enim velit iure. Aliquid dicta libero sed esse quod ex
@@ -52,7 +52,7 @@ const Category = (prop) => {
 
           {/* <!-- news text begin--> */}
           <div className="mt-4 border-l-[30px] border-green-600 pl-2">
-            <h1 className="font-bold font-serif text-3xl">Vehicle Tracking</h1>
+            <h1 className="font-bold text-3xl">Vehicle Tracking</h1>
             <div className="mt-2 font-light">
               <p>A simple solution developed by Africa systems to help you locate and monitor
                 your vehicles across the land with just a click.</p>
@@ -75,21 +75,21 @@ const Category = (prop) => {
 
         <div className="col-span-1 flex justify-center items-center">
           <div className="flex items-baseline">
-            <h1 className="font-serif font-bold text-2xl md:text-7xl text-green-600">+37</h1>
+            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+37</h1>
             <span className="text-sm md:text-base">Projects</span>
           </div>
         </div>
 
         <div className="col-span-1 flex justify-center items-center">
           <div className="flex items-baseline">
-            <h1 className="font-serif font-bold text-2xl md:text-7xl text-green-600">+29</h1>
+            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+29</h1>
             <span className="text-sm md:text-base">Sucsses</span>
           </div>
         </div>
 
         <div className="col-span-1 flex justify-center items-center">
           <div className="flex items-baseline">
-            <h1 className="font-serif font-bold text-2xl md:text-7xl text-green-600">+2</h1>
+            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+2</h1>
             <span className="text-sm md:text-base">Awords</span>
           </div>
         </div>

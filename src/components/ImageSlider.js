@@ -10,18 +10,6 @@ const ImageSlider = () => {
 
   const { lang } = useStateContext();
   const { Industries } = Datastc("industries", lang);
-  // const Industries = [
-  //   {
-  //     title: "this os a title",
-  //     subtitle: "this is a sub title this is a sub title this is a sub title this is a sub title this is a sub title",
-  //     mainImage: image1,
-  //   },
-  //   {
-  //     title: "this os a title",
-  //     subtitle: "this is a sub title this is a sub title this is a sub title this is a sub title this is a sub title",
-  //     mainImage: image2,
-  //   },
-  // ]
 
   return (
     <div>
@@ -37,7 +25,7 @@ const ImageSlider = () => {
                   {/* <!-- text --> */}
                   <div className="col-span-3 flex justify-center bg-[#347423] h-56 md:h-60 text-white">
                     <div className="w-96">
-                      <h1 className="text-4xl font-bold font-serif my-4">{item.title}</h1>
+                      <h1 className="text-4xl font-bold my-4">{item.title}</h1>
                       <div className="">
                         <p>
                           {item.subtitle}
@@ -61,10 +49,6 @@ const ImageSlider = () => {
             </div>
           ))}
 
-          {/* <img
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-            alt="..."
-          /> */}
         </Carousel>
       </div>
     </div>

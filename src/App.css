@@ -58,3 +58,7 @@
 .animunder:hover::after {
   width: 100%;
 }
+
+.myfont{
+  font-family: Arial, Helvetica, sans-serif;
+}

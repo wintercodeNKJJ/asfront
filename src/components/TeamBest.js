@@ -30,7 +30,7 @@ const TeamBest = () => {
           {showtitle &&
             <div className="lg:mx-44 mx-10 my-8 flex justify-center">
               <div className="w-3/6 flex flex-col items-center">
-                <h1 className="font-bold text-3xl font-serif text-center">{Title[0].title}</h1>
+                <h1 className="font-bold text-3xl  text-center">{Title[0].title}</h1>
                 <p className="text-center">{Title[0].body}</p>
               </div>
             </div>
@@ -49,8 +49,8 @@ const TeamBest = () => {
                   <img src={item.mainImage ? urlFor(item.mainImage) : ASL} alt="" class="h-32 w-32 shadow rounded-full bg-white" />
                 </div>
 
-                <div class="w-full h-32 py-6 flex flex-col items-center gap-4 justify-center font-serif">
-                  <h1 class="text-2xl font-bold font-serif">{item.title}</h1>
+                <div class="w-full h-32 py-6 flex flex-col items-center gap-4 justify-center ">
+                  <h1 class="text-2xl font-bold ">{item.title}</h1>
                   <p class="text-center">{item.post}</p>
                 </div>
                 <div class="flex justify-center gap-2 p-2 w-full items-center">

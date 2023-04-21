@@ -20,7 +20,7 @@ function App() {
   const { Products } = Datastc("products", 'en')
   const { Cnews } = Ndatastc('cnews', 'en')
   return (
-    <div className="App font-serif">
+    <div className="App myfont">
       <Router>
         <StateContext>
           <Header />
