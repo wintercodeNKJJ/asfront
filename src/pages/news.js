@@ -73,7 +73,7 @@ const NewsLatest = () => {
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text}</p>
+                    <p>{news.body.children.text.substring(0,250)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>
@@ -109,7 +109,7 @@ const NewsLatest = () => {
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text}</p>
+                    <p>{news.body.children.text.substring(0,250)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>
@@ -146,7 +146,7 @@ const NewsLatest = () => {
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text}</p>
+                    <p>{news.body.children.text.substring(0,250)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>
