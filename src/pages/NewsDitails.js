@@ -7,14 +7,14 @@ const NewsDitails = (props) => {
       <div className="h-full p-4 flex justify-center">
         <div className="mx-auto w-full md:max-w-[60rem]">
 
-          <div className="text-3xl font-bold my-4">
+          <div className="text-3xl font-bold mt-4 mb-8">
             <h1>{props.item.title}</h1>
-          </div>
-          <div>
-            <img src={urlFor(props.item.mainImage)} alt={props.item.title} className="h-full w-full object-cover" />
           </div>
           <div className="flex justify-end text-sm">
             <p>{props.item._createdAt}</p>
+          </div>
+          <div>
+            <img src={urlFor(props.item.mainImage)} alt={props.item.title} className="h-full w-full object-cover" />
           </div>
 
           <div className="my-4">
