@@ -48,7 +48,7 @@ const NewsLatest = () => {
 
           {/* <!-- items begin--> */}
           <div className="my-4 text-4xl font-bold md:y-10 lg:px-40 divider" id="News"> News</div>
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
 
             {/* <!-- news block 1 --> */}
 
@@ -69,11 +69,11 @@ const NewsLatest = () => {
 
                 <div className="p-2">
                   <div className="text-3xl font-bold my-1">
-                    <h1 className="">{news.title}</h1>
+                    <h1 className="">{news.title.substring(0,40)}...</h1>
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text.substring(0,250)}</p>
+                    <p>{news.body.children.text.substring(0,150)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>
@@ -88,7 +88,7 @@ const NewsLatest = () => {
             ))}
           </div>
           <div className="my-4 text-4xl font-bold md:y-10 lg:px-40 divider" id="Events"> Events </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
             {Eve && Events.events.map((news) => (
               <div className="shadow-lg rounded-lg overflow-hidden">
 
@@ -105,11 +105,11 @@ const NewsLatest = () => {
 
                 <div className="p-2">
                   <div className="text-3xl font-bold my-1">
-                    <h1 className="">{news.title}</h1>
+                    <h1 className="">{news.title.substring(0,40)}...</h1>
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text.substring(0,250)}</p>
+                    <p>{news.body.children.text.substring(0,150)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>
@@ -124,7 +124,7 @@ const NewsLatest = () => {
             ))}
           </div>
           <div className="my-4 text-4xl font-bold md:y-10 lg:px-40 divider" id="Inovation"> Inovations </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 lg:px-40 gap-x-10 py-5 md:py-10 px-4">
 
             {Inovat && Inovation.inovations.map((news) => (
               <div className="shadow-lg rounded-lg overflow-hidden">
@@ -142,11 +142,11 @@ const NewsLatest = () => {
 
                 <div className="p-2">
                   <div className="text-3xl font-bold my-1">
-                    <h1 className="">{news.title}</h1>
+                    <h1 className="">{news.title.substring(0,40)}...</h1>
                   </div>
 
                   <div className="my-1 text-justify">
-                    <p>{news.body.children.text.substring(0,250)}</p>
+                    <p>{news.body.children.text.substring(0,150)}</p>
                   </div>
 
                   <div className="h-1 bg-[#347423] w-24"></div>

@@ -44,8 +44,8 @@ const Footer = () => {
           <div
             class=" h-full bg-[url('/src/assets/logo/footer.png')] bg-cover grid grid-cols-1 md:grid-cols-3 px-10 py-5 gap-3 text-white md:px-20 lg:px-40">
 
-            <div class="col-span-1 ml-5">
-              <div class="w-52">
+            <div class="col-span-1 mr-10">
+              <div class="w-full">
                 <div class="flex items-center gap-1">
                   <img src={ASL} alt="As Logo" class="h-11" />
                   <p class="text-xl font-bold">Africa Systems</p>
@@ -62,9 +62,9 @@ const Footer = () => {
                   <div class="rounded-full p-1"><TiLocation size={20} /></div>
                   <div class="flex">
                     <div class="flex flex-col items-start text-sm">
-                      <p class="font-bold text-base my-1">Address</p>
+                      <p class="font-bold text-base my-1">{lang==='en'?'Address':'Addresse'}</p>
                       <div class="flex">
-                        <p>Current address</p>
+                        <p>{lang==='en'?'Current address':'Addresse Courente'}Current address</p>
                       </div>
                       <div class="flex">
                         <p>{ASlocation.body}</p>
@@ -76,13 +76,13 @@ const Footer = () => {
                   <div class="rounded-full p-1"><AiFillPhone size={20} /></div>
                   <div class="flex">
                     <div class="flex flex-col items-start text-sm">
-                      <p class="font-bold text-base my-1">Contact</p>
+                      <p class="font-bold text-base my-1">{lang==='en'?'Contact':'Contact'}</p>
                       <div class="flex">
-                        <p class="font-bold">phone:</p>
+                        <p class="font-bold">{lang==='en'?'phone:':'Tel'}</p>
                         <p>{ASnumber.body}</p>
                       </div>
                       <div class="flex">
-                        <p class="font-bold">Email:</p>
+                        <p class="font-bold">{lang==='en'?'Email:':'Email:'}</p>
                         <p>{ASemail.body}</p>
                       </div>
                     </div>
@@ -92,12 +92,12 @@ const Footer = () => {
                   <div class="rounded-full p-1"><AiFillClockCircle size={20} /></div>
                   <div class="flex">
                     <div class="flex flex-col items-start text-sm">
-                      <p class="font-bold text-base my-1">Open Hours</p>
+                      <p class="font-bold text-base my-1">{lang==='en'?'Open Hours':'Heurs D\'ouverture'}</p>
                       <div class="flex">
                         <p class="font-bold">{AShours.body}</p>
                       </div>
                       <div class="flex">
-                        <p>Saturday & Sunday: Closed</p>
+                        <p>{lang==='en'?'Saturday & Sunday: Closed':'Samedi & Dimanche: Fermer'}</p>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const Footer = () => {
 
           </div>
 
-          <div class="h-10 flex bg-[#4d4643] px-28 justify-between items-center text-white">
+          <div class="h-10 flex bg-[#4d4643] px-28 items-center justify-center text-white">
             <div>&copy;<span class="font-bold">AfricaSyetems 2023</span>. All rights reserved</div>
             <div class="flex items-center">
               <img src={ASL} alt="As logo" class="h-8" />
