@@ -42,7 +42,7 @@ const DitailsContent = (prop) => {
 
           <div className="col-span-3">
             <div className=" w-full pt-6 relative">
-              <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : ASL} alt="Energy" className="h-96 w-full object-cover rounded-md overflow-hidden" />
+              <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : ASL} alt="Energy" className="h-96 w-full object-cover rounded-md overflow-hidden bg-[#4d4643]" />
               <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
             </div>
           </div>
@@ -71,7 +71,7 @@ const DitailsContent = (prop) => {
             {prop.other.slice(0,4).map((item)=>(
               <div className="my-2">
               <div className="relative">
-                <img src={item.mainImage !== null ? imageUrl(item.mainImage) : ASL} alt="Energy" className=" h-32 rounded-md w-full object-cover" />
+                <img src={item.mainImage !== null ? imageUrl(item.mainImage) : ASL} alt="Energy" className=" h-32 rounded-md w-full object-cover bg-[#4d4643]" />
                 <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
               </div>
                 <div className="flex justify-end text-sm">
