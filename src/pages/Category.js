@@ -1,19 +1,56 @@
 // import ImageSlider from "../components/ImageSlider";
-import Tracking from "../assets/vehicle_tracking.jpeg";
+// import Tracking from "../assets/vehicle_tracking.jpeg";
 // import PatnersLogo from "../components/PatnersLogo";
-// import power from "../assets/power.png";
+import AS from "../assets/ASL.png";
 // import News from "../components/News";
 import OptionsItems from "../components/OptoinsItems";
+import Cathegory from "../dbitems/cathegory";
+import { useStateContext } from "../context/StateContext";
+
 
 const Category = (prop) => {
+  const { lang } = useStateContext()
 
-
+  const { IndistryCathegory } = Cathegory("Industry",lang);
+  const { ProductsCathegory } = Cathegory("Products",lang);
+  const { ServicesCathegory } = Cathegory("Services",lang);
+  const { ResearchCathegory } = Cathegory("Research",lang);
   const Title = prop.title;
+  let data = null
+
+  switch (Title) {
+    case "Industries":
+      data = IndistryCathegory;  
+      break;
+      case "Products":
+        data = ProductsCathegory;  
+        break;
+        case "Servicies":
+          data = ServicesCathegory;  
+          break;
+          case "Research_&_Development":
+            data = ResearchCathegory;  
+            break;
+        
+    default:
+      data = [{
+        title:"This item is not veilable",
+        description: "This item is not aveilable"
+      }]
+      break;
+  }
+
+  console.log("cathefory data",data);
+
   return (
     <div>
-      {/* <!-- page tite begin --> */}
+      {!data[0] && <div className="h-screen px-4 md:px-40 font-light flex justify-center items-center">Loding...</div>}
+      
+      {data[0] && 
+      <div>
+        {/* <!-- page tite begin --> */}
       <div className=" lg:px-40 px-10 flex justify-start">
-        <h1 className="text-5xl font-extrabold my-3">{Title}</h1>
+        <h1 className="text-5xl font-extrabold my-3">{data[0].title}</h1>
       </div>
       {/* <!-- page tite end --> */}
       {/* <ImageSlider /> */}
@@ -23,12 +60,15 @@ const Category = (prop) => {
         {/* <!-- left side --> */}
         <div>
           {/* <!-- news image --> */}
-          <img src={Tracking} alt="" className="h-60 object-cover w-full" />
+          <div className="w-full relative">
+          <img src={AS} alt="" className="h-60 object-cover w-full bg-[#4d4643] rounded-md" />
+          <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
+          </div>
           {/* <!-- news image --> */}
 
           {/* <!-- news text begin--> */}
           <div className="mt-4">
-            <h1 className="font-bold text-xl">Vehicle Tracking</h1>
+            <h1 className="font-bold text-2xl">{data[0].title}</h1>
             <div className="mt-2 font-light">
               <p>A simple solution developed by Africa systems to help you locate and monitor
                 your vehicles across the land with just a click.</p>
@@ -43,9 +83,7 @@ const Category = (prop) => {
           <div className="mt-4 border-l-[30px] border-green-600 pl-2">
             <h1 className="font-bold text-3xl">First side Mesage</h1>
             <div className="mt-2 font-light">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda sapiente quae eligendi fuga corrupti
-                ratione aperiam laudantium minima voluptatibus, enim velit iure. Aliquid dicta libero sed esse quod ex
-                voluptate!</p>
+              <p>{data[0].description}</p>
             </div>
           </div>
           {/* <!-- news text top end --> */}
@@ -66,36 +104,11 @@ const Category = (prop) => {
 
       <OptionsItems searchtitle={Title} />
 
-      {/* <!-- Succeses begin --> */}
-      {/* <div className="grid col-span-3 lg:grid-cols-4 lg:px-40 px-4 py-28 gap-5 bg-gray-300">
-
-        <div className="col-span-3 lg:col-span-1 flex justify-center">
-          <img src={power} alt="power" className="h-52 lg:h-60" />
-        </div>
-
-        <div className="col-span-1 flex justify-center items-center">
-          <div className="flex items-baseline">
-            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+37</h1>
-            <span className="text-sm md:text-base">Projects</span>
-          </div>
-        </div>
-
-        <div className="col-span-1 flex justify-center items-center">
-          <div className="flex items-baseline">
-            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+29</h1>
-            <span className="text-sm md:text-base">Sucsses</span>
-          </div>
-        </div>
-
-        <div className="col-span-1 flex justify-center items-center">
-          <div className="flex items-baseline">
-            <h1 className= font-bold text-2xl md:text-7xl text-green-600">+2</h1>
-            <span className="text-sm md:text-base">Awords</span>
-          </div>
-        </div>
-
-      </div> */}
+      
       {/* <!-- Succeses end --> */}
+      </div>
+      }
+      
     </div >
   );
 }
