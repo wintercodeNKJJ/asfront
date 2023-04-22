@@ -51,13 +51,13 @@ const OptionsItems = ({ searchtitle }) => {
           {data.map((item) => (
             <div className="flex justify-center">
               <div className="col-span-1 mx-4 my-4">
-                <a href={item.title} className="hover:opacity-60">
-                  <img src={item.mainImage ? urlFor(item.mainImage) : ASL} alt="option" className="h-64 w-full object-cover bg-white" />
+                <a href={item.title} className="hover:opacity-60 relative">
+                  <img src={item.mainImage ? urlFor(item.mainImage) : ASL} alt="option" className="h-64 w-full object-cover rounded-md overflow-hidden bg-white" />
+                  <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={ASL} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
                 </a>
 
                 <div className="text-black">
-                  <h1 className="font-bold text-3xl">AS</h1>
-                  <h2 className="text-xl">{item.title}</h2>
+                  <h2 className="text-xl font-bold">{item.title}</h2>
                   <div className="h-1 my-3 bg-green-700 w-14"></div>
                   <div className="font-light">
                     <p>{item.subtitle}</p>

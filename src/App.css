@@ -42,6 +42,10 @@
   padding: 0px;
 }
 
+.asol:nth-child(2){
+  z-index: 20;
+}
+
 .corner-squar>div>div {
   border-radius: 0px;
 }

@@ -1,8 +1,8 @@
 import Ndatastc from "../dbitems/dbnews";
 import urlFor from "../utility/imageUrl";
+import AS from "../assets/ASL.png";
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { useStateContext } from "../context/StateContext"
-import { Link, animateScroll as scroll } from "react-scroll";
 
 /**
  * this page contains the news of AS activites
@@ -35,13 +35,13 @@ const NewsLatest = () => {
       {!data && <div className="h-screen px-4 md:px-40 font-light flex justify-center items-center"> Loding...</div>}
       {data &&
 
-        <div>
+        <div className=" relative">
           {/* <!-- Title begin --> */}
-          <div className="lg:mx-44 mx-10 my-2">
+          <div className="lg:px-44 px-10 py-2 bg-[#347423] sticky top-0 z-10">
             <div className="w-3/6 flex gap-2">
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="News" spy={true} smooth={true} offset={-70} duration={500}/>news</div>
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="Events" spy={true} smooth={true} duration={500}/>events</div>
-              <div className="border border-gray-400 rounded-lg text-center w-24" ><Link to="Inovation" spy={true} smooth={true} offset={-70} duration={500}/>inovation</div>
+            <a href="#News"><div className="border border-white text-white hover:text-black hover:bg-white hover:border-black duration-500 rounded-lg text-center w-24" >news</div></a>
+            <a href="#Events"><div className="border border-white text-white hover:text-black hover:bg-white hover:border-black duration-500 rounded-lg text-center w-24" >events</div></a>
+            <a href="#Inovation"><div className="border border-white text-white hover:text-black hover:bg-white hover:border-black duration-500 rounded-lg text-center w-24" >inovation</div></a>
             </div>
           </div>
           {/* <!-- Title end --> */}
@@ -59,12 +59,7 @@ const NewsLatest = () => {
                 <div className="relative">
                   <img src={urlFor(news.mainImage)} alt="news 1" className="h-60 w-full object-cover hover:scale-110 duration-500" />
 
-                  <div className="flex justify-end text-sm text-white absolute right-2 bottom-2">
-                    <p>{news._createdAt}</p>
-                  </div>
-
-                  <span
-                    className="rounded-full absolute top-2 left-2 bg-gradient-to-tr from-[#4d4643] to-green-600 p-1 w-20 -rotate-6 text-center text-white">new</span>
+                  <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
                 </div>
 
                 <div className="p-2">
@@ -78,8 +73,8 @@ const NewsLatest = () => {
 
                   <div className="h-1 bg-[#347423] w-24"></div>
 
-                  <div className="flex justify-start my-3 w-32 rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
-                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn
+                  <div className="flex justify-start my-3 w-32 hover:w-full rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
+                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-center w-full">Learn
                       More
                       <AiOutlineArrowRight /></a></span>
                   </div>
@@ -95,12 +90,7 @@ const NewsLatest = () => {
                 <div className="relative">
                   <img src={urlFor(news.mainImage)} alt="news 1" className="h-60 w-full object-cover hover:scale-110 duration-500" />
 
-                  <div className="flex justify-end text-sm text-white absolute right-2 bottom-2">
-                    <p>{news._createdAt}</p>
-                  </div>
-
-                  <span
-                    className="rounded-full absolute top-2 left-2 bg-gradient-to-tr from-[#4d4643] to-green-600 p-1 w-20 -rotate-6 text-center text-white">new</span>
+                  <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
                 </div>
 
                 <div className="p-2">
@@ -114,8 +104,8 @@ const NewsLatest = () => {
 
                   <div className="h-1 bg-[#347423] w-24"></div>
 
-                  <div className="flex justify-start my-3 w-32 rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
-                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn
+                  <div className="flex justify-start my-3 w-32 hover:w-full rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
+                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-center w-full">Learn
                       More
                       <AiOutlineArrowRight /></a></span>
                   </div>
@@ -132,12 +122,11 @@ const NewsLatest = () => {
                 <div className="relative">
                   <img src={urlFor(news.mainImage)} alt="news 1" className="h-60 w-full object-cover hover:scale-110 duration-500" />
 
-                  <div className="flex justify-end text-sm text-white absolute right-2 bottom-2">
-                    <p>{news._createdAt}</p>
-                  </div>
+                  <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
 
-                  <span
-                    className="rounded-full absolute top-2 left-2 bg-gradient-to-tr from-[#4d4643] to-green-600 p-1 w-20 -rotate-6 text-center text-white">new</span>
+
+                  {/* <span
+                    className="rounded-full absolute top-2 left-2 bg-gradient-to-tr from-[#4d4643] to-green-600 p-1 w-20 -rotate-6 text-center text-white">new</span> */}
                 </div>
 
                 <div className="p-2">
@@ -151,8 +140,8 @@ const NewsLatest = () => {
 
                   <div className="h-1 bg-[#347423] w-24"></div>
 
-                  <div className="flex justify-start my-3 w-32 rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
-                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-baseline w-full">Learn
+                  <div className="flex justify-start my-3 w-32 hover:w-full rounded-full overflow-hidden hover:bg-[#4d4643] px-2 duration-500">
+                    <span className="w-full hover:text-white"><a href={"/" + news._id} className="flex justify-between items-center w-full">Learn
                       More
                       <AiOutlineArrowRight /></a></span>
                   </div>

@@ -6,6 +6,7 @@
 import OptionsItems from "./OptoinsItems";
 import imageUrl from "../utility/imageUrl";
 import Techno from "../assets/techno.jpeg";
+import AS from "../assets/ASL.png";
 
 /**
  * 
@@ -19,6 +20,10 @@ import Techno from "../assets/techno.jpeg";
  * @returns A ditail page describing the item
  */
 const DitailsContent = (prop) => {
+  let download = false;
+  if(prop.data.title === "Radio" || prop.data.title === "LewooTrack"){
+    download = true;
+  }
   return (
     <div className="">
 
@@ -36,8 +41,9 @@ const DitailsContent = (prop) => {
         <div className="col-span-1 md:col-span-2 ">
 
           <div className="col-span-3">
-            <div className=" w-full pt-6">
-              <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className="h-44 w-full object-cover" />
+            <div className=" w-full pt-6 relative">
+              <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className="h-96 w-full object-cover rounded-md overflow-hidden" />
+              <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
             </div>
           </div>
           {/* <!-- left side --> */}
@@ -50,6 +56,9 @@ const DitailsContent = (prop) => {
                 {prop.data.body.children.text}
               </p>
             </div>
+            <div className={download ? "w-full flex":"hidden"}>
+              <a href={"/files/"+prop.data.title+"/file1.pdf"} download className=" my-2 px-4 py-1 rounded-full bg-[#4d4643] hover:bg-[#347423] duration-500 hover:scale-110 shadow-lg text-white flex justify-center">Download Broshure</a>
+            </div>
           </div>
         </div>
 
@@ -58,35 +67,19 @@ const DitailsContent = (prop) => {
         {/* <!-- related chapters begin --> */}
         <div className=" p-4">
           <div className="flex flex-col">
-            <div className="my-2">
-              <div className="">
-                <img src={prop.data.mainImage !== null ? imageUrl(prop.data.mainImage) : Techno} alt="Energy" className=" h-24 w-full object-cover" />
-                <div className="flex justify-end text-sm">
-                  <p>29/3/2012</p>
-                </div>
-              </div>
-              <h1 className="font-bold text-justify ">{prop.data.subtitle.substring(0, 50) + '...'}</h1>
-            </div>
 
-            <div className="my-2">
-              <div className="">
-                <img src={Techno} alt="Energy" className="h-24 w-full object-cover" />
+            {prop.other.slice(0,4).map((item)=>(
+              <div className="my-2">
+              <div className="relative">
+                <img src={item.mainImage !== null ? imageUrl(item.mainImage) : Techno} alt="Energy" className=" h-32 rounded-md w-full object-cover" />
+                <h1 className="font-light text-sm absolute left-2 bottom-2 backdrop-blur-lg rounded-box p-2 text-white"> <img src={AS} className=" h-6 w-6 mr-2 bg-white rounded-full inline-flex" alt="as logo"/> Africa Systems</h1>
+              </div>
                 <div className="flex justify-end text-sm">
                   <p>29/3/2012</p>
                 </div>
-              </div>
-              <h1 className="font-bold text-justify ">Energy subtopic one ...</h1>
+              <h1 className="font-bold text-justify ">{item.subtitle.substring(0, 50) + '...'}</h1>
             </div>
-
-            <div className="my-2">
-              <div className="">
-                <img src={Techno} alt="Energy" className="h-24 w-full object-cover" />
-                <div className="flex justify-end text-sm">
-                  <p>29/3/2012</p>
-                </div>
-              </div>
-              <h1 className="font-bold text-justify ">Energy subtopic one ...</h1>
-            </div>
+            ))}
 
           </div>
         </div>

@@ -16,6 +16,7 @@ const Ditails = (prop) => {
 
   const Title = prop.title;
   let data = null;
+  let sideContent = null;
   const { lang } = useStateContext()
 
 
@@ -29,13 +30,15 @@ const Ditails = (prop) => {
   switch (Title) {
     case "Industries":
       data = Industries.find(item => item.slug.current === prop.search);
-
+      sideContent = Industries;
       break;
     case "Services":
       data = Services.find(item => item.slug.current === prop.search);
+      sideContent = Services;
       break;
     default:
       data = Products.find(item => item.slug.current === prop.search);
+      sideContent = Products;
       break;
   }
 
@@ -44,7 +47,7 @@ const Ditails = (prop) => {
 
       {!data && <div className="h-screen px-4 md:px-40 font-light flex justify-center items-center"> Loding...</div>}
 
-      {data && <DitailsContent data={data} title={prop.title} />}
+      {data && <DitailsContent data={data} title={prop.title} other={sideContent}/>}
 
       <PatnersLogo />
     </div >

@@ -40,7 +40,7 @@ const Menu = (props) => {
 
   return (
 
-    <div>
+    <div className="asol">
 
       <Dropdown
         trigger="hover"
