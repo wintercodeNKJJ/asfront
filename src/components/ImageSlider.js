@@ -14,7 +14,7 @@ const ImageSlider = () => {
   return (
     <div>
 
-      <div className="h-56 md:h-60 relative corner-squar">
+      <div className="h-72 md:h-60 relative corner-squar">
         <Carousel>
           {Industries.map((item, i) => (
             <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" key={i}>
@@ -23,8 +23,8 @@ const ImageSlider = () => {
 
                 <div className="grid grid-cils-1 md:grid-cols-5">
                   {/* <!-- text --> */}
-                  <div className="col-span-3 flex justify-center bg-[#347423] h-56 md:h-60 text-white">
-                    <div className="w-full max-w-[24rem] my-4 mx-6">
+                  <div className="col-span-3 flex justify-center bg-[#347423] h-72 md:h-60 text-white">
+                    <div className="w-full max-w-[24rem] my-4 mx-8">
                       <h1 className="text-4xl font-bold">{item.title}</h1>
                       <div className="">
                         <p>
