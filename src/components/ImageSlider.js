@@ -24,8 +24,8 @@ const ImageSlider = () => {
                 <div className="grid grid-cils-1 md:grid-cols-5">
                   {/* <!-- text --> */}
                   <div className="col-span-3 flex justify-center bg-[#347423] h-56 md:h-60 text-white">
-                    <div className="w-96">
-                      <h1 className="text-4xl font-bold my-4">{item.title}</h1>
+                    <div className="w-full max-w-[24rem] my-4 mx-6">
+                      <h1 className="text-4xl font-bold">{item.title}</h1>
                       <div className="">
                         <p>
                           {item.subtitle}

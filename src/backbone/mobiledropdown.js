@@ -33,12 +33,12 @@ const MobileDropDown = () => {
       >
         <div className="w-full ">
           <ul className="p-4 font-light">
-            <li className="border-b-1 border-transparent"><a href="/"
-              className="w-full border-b-1 ">Home</a></li>
+            <li className="border-b-[1px] py-1"><a href="/"
+              className="w-full">Home</a></li>
 
             {/* Industries Menu */}
-            <li className="border-b-1 border-transparent"><div
-              className="w-full border-b-1  flex justify-between"><a href="/Industries">Industries</a> <div className="rounded-box p-1 bg-[#4d4643]">{inShow ? <AiOutlineMinus onClick={() => setInShow(!inShow)} /> : <AiOutlinePlus onClick={() => setInShow(!inShow)} />}</div></div>
+            <li className="border-b-[1px] py-1"><div
+              className="w-full flex justify-between"><a href="/Industries">Industries</a> <div className="rounded-[0.325rem] p-1 bg-[#4d4643]">{inShow ? <AiOutlineMinus onClick={() => setInShow(!inShow)} /> : <AiOutlinePlus onClick={() => setInShow(!inShow)} />}</div></div>
               <ul className={inShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Industries.map((data, i) => (
                   <li className="flex justify-center" key={i}><a href={"/" + data.title}>{data.title}</a></li>
@@ -47,8 +47,8 @@ const MobileDropDown = () => {
             </li>
 
             {/* Services Menu */}
-            <li className="border-b-1 border-transparent"><div
-              className="w-full border-b-1  flex justify-between"><a href="/Services">Services</a> {serShow ? <AiOutlineMinus onClick={() => setSerShow(!serShow)} /> : <AiOutlinePlus onClick={() => setSerShow(!serShow)} />}</div>
+            <li className="border-b-[1px] py-1"><div
+              className="w-full flex justify-between"><a href="/Services">Services</a> <div className="rounded-[0.325rem] p-1 bg-[#4d4643]">{serShow ? <AiOutlineMinus onClick={() => setSerShow(!serShow)} /> : <AiOutlinePlus onClick={() => setSerShow(!serShow)} />}</div></div>
               <ul className={serShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Services.map((data, i) => (
                   <li className="flex justify-center" key={i}><a href={"/" + data.title}>{data.title}</a></li>
@@ -57,9 +57,9 @@ const MobileDropDown = () => {
             </li>
 
             {/* Products Menu */}
-            <li className="border-b-1 border-transparent"><div
-              className="w-full border-b-1  flex justify-between"><a href="/Products">Products</a> {prodShow ? <AiOutlineMinus onClick={() => setProdShow(!prodShow)} /> : <AiOutlinePlus onClick={() => setProdShow(!prodShow)} />}</div>
-              <ul className={prodShow ? "grid grid-cols-3 gap-2 border" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
+            <li className="border-b-[1px] py-1"><div
+              className="w-full flex justify-between"><a href="/Products">Products</a> <div className="rounded-[0.325rem] p-1 bg-[#4d4643]">{prodShow ? <AiOutlineMinus onClick={() => setProdShow(!prodShow)} /> : <AiOutlinePlus onClick={() => setProdShow(!prodShow)} />}</div></div>
+              <ul className={prodShow ? "grid grid-cols-3 gap-2" : "grid grid-cols-3 gap-2 h-0 overflow-hidden"}>
                 {Products.map((data, i) => (
                   <li className="flex justify-center" key={i}><a href={"/" + data.title.replace("_", " ")}>{data.title.replace("_", " ")}</a></li>
                 ))}
@@ -67,14 +67,14 @@ const MobileDropDown = () => {
             </li>
 
             {/* other links */}
-            <li className="border-b-1 border-transparent"><a href="/nolink"
-              className="w-fit border-b-1 ">Research &
+            <li className="border-b-[1px] py-1"><a href="/nolink"
+              className="w-fit ">Research &
               Development</a></li>
-            <li className="border-b-1 border-transparent"><a href="/Aboutus"
-              className="w-full border-b-1 ">Who we are</a></li>
-            <li className="border-b-1 border-transparent"><a href="/News"
-              className="w-full border-b-1 ">Latest news</a></li>
-            <li className="border-b-1 border-transparent"><a href="https://ecomm-wintercodenkjj.vercel.app/"
+            <li className=" border-b-[1px] py-1"><a href="/Aboutus"
+              className="w-full ">Who we are</a></li>
+            <li className="border-b-[1px] py-1"><a href="/News"
+              className="w-full ">Latest news</a></li>
+            <li className="border-b-[1px] py-1"><a href="https://ecomm-wintercodenkjj.vercel.app/"
               className="">E Commerce</a></li>
           </ul>
         </div>

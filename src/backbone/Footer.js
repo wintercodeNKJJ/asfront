@@ -117,7 +117,7 @@ const Footer = () => {
 
           </div>
 
-          <div class="h-10 flex bg-[#4d4643] px-28 items-center justify-center text-white">
+          <div class="h-10 flex bg-[#4d4643] items-center justify-center text-white">
             <div>&copy;<span class="font-bold">AfricaSyetems 2023</span>. All rights reserved</div>
             <div class="flex items-center">
               <img src={ASL} alt="As logo" class="h-8" />
