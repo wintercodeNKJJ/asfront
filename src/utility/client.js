@@ -4,5 +4,4 @@ export default createClient({
   projectId: 'q7433i71',
   dataset: 'production',
   apiVersion: "2023-02-19",
-  useCdn: true,
 })

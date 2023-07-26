@@ -25,7 +25,7 @@ const MobileDropDown = () => {
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
           className="inline-block w-12 h-8 stroke-current text-black">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h20M4 12h20M4 18h20"></path>
+          <path stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h20M4 12h20M4 18h20"></path>
         </svg>
       </div>
 
